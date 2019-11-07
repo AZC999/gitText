@@ -1,0 +1,15 @@
+$rows[] = $arr;
+}
+print_r($rows);//二维数组
+
+$arrLen = count($rows);
+
+// var_dump($arrLen);//int 3
+
+if($arrLen > 0){//有数据
+    echo json_encode($rows,JSON_UNESCAPED_UNICODE);//把数组转成json字符串，返回
+} else {// 没有数据
+    echo '你查询的数据没有!';
+}
+
+mysqli_close($link); // 关闭数据库连接
