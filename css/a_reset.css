@@ -1,0 +1,59 @@
+html,body,p,span,ul,li,ol,dl,dt,dd,img,h1,h2,h4,h3,h5,h6,input,a,i,em,b,strong,table,tr,td,form{
+	padding:0; margin: 0;
+}
+input{
+	outline:medium;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ul li,ol li{
+	list-style: none;
+}
+img{
+	border: none; vertical-align: top;
+}
+body{
+	font-family: "微软雅黑"; font-size: 12px;
+}
+a{text-decoration: none;}
+.clearfix:after{
+	content: ""; display: block; overflow: hidden; height: 0; font-size: 0; visibility: hidden;
+	clear: both;
+}
+  
+@charset "utf-8";
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption{
+	margin:0;
+	padding:0;	
+}
+body,html{
+	font:16px "微软雅黑",Arial;
+	color:#333333;	
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+	font-weight:normal;
+	font-size:100%;	
+}
+i,em{
+	font-style:normal;	
+}
+a{
+	text-decoration:none;
+	color:#333333;	
+}
+li{
+	list-style:none;	
+}
+.clearfix{
+    *zoom: 1;
+}
+.clearfix::after{
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}

@@ -1,0 +1,38 @@
+.a_banner{width: 1920px;
+margin: 0 auto;
+}
+.a_banner img{width: 1920px;
+height: 550px;
+margin:  0 auto;
+}
+.a_banner a{
+	display: block;
+	width: 1920px;
+	height: 550px;
+	margin: 0 auto;
+}
+.a_title{
+	width: 256px;
+	height: 230px;
+}
+.a_title h1{
+	font-size: 40px;
+	color: #000000;
+	font-weight: bold;
+	margin: 0 auto;
+	line-height: 100px;
+	margin-top: 55px;
+	text-align: center;
+}
+.a_title p{text-align: center;
+color: #333;
+font-size: 14px;}
+.a_pic{
+	height: 500px;
+	margin: auto;
+}
+.a_swiperBox{
+	width: 1074px;
+	height: 371px;
+	margin: 0 auto;
+}

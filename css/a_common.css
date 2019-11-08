@@ -1,0 +1,82 @@
+.a_container{
+	width: 1180px;
+	margin: 0 auto;
+}
+.a_header{
+	min-width: 1920px;
+    height:42px;
+    background-color:#333;
+}
+.a_header a{color:#fff ;
+font-size: 12px;
+margin-left: 40px;
+padding: 10px;
+line-height: 42px;}
+.logo{
+	height:231px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.logo img{width: 98px;
+height: 58px;
+margin:0 auto;
+margin-top: 60px;}
+.logo a{
+	display: block;
+	width: 98px;
+	height: 58px;
+	margin:  0 auto;
+}
+.a_nav{
+	height: 42px;
+	border-bottom: 1px solid #eee;
+	margin:0 auto;
+}
+.a1_nav{
+	height: 42px;
+	float: left;
+}
+.a1_nav a{line-height: 42px;
+font-size:20px ;
+font-weight: bold;
+color: #333;
+padding:40px;
+box-sizing: border-box;
+}
+.a1_nav a:hover{
+	color: #f50014;
+}
+.a_login{
+	float: left;
+	width:188px ;
+	height: 36px;
+	border-bottom: 1px solid #333333;
+	margin-left: 60px;
+}
+.a_login input{
+	width:154px ;
+	height: 42px;
+	border-bottom: 2px solid #000;
+	outline:medium;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	background-image: url(../img/fdj.jpg) no repeat right;
+}
+.a_login img{width: 34px;
+height: 25px;
+background-color: #FFFFFF;
+}
+.a_login a{display: block;
+width: 22px;
+height: 22px;
+float: right;
+background-color: #FFFFFF;}
+.content{
+	min-height: 500px;
+}
+.a_footer{
+	background: #333333;
+	height: 576px;
+	min-width: 1920px;
+}
