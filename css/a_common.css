@@ -2,12 +2,12 @@
 	width: 1180px;
 	margin: 0 auto;
 }
-.a_header{
+.head{
 	min-width: 1920px;
     height:42px;
     background-color:#333;
 }
-.a_header a{color:#fff ;
+.head a{color:#fff ;
 font-size: 12px;
 margin-left: 40px;
 padding: 10px;
@@ -75,7 +75,7 @@ background-color: #FFFFFF;}
 .content{
 	min-height: 500px;
 }
-.a_footer{
+.footer{
 	background: #333333;
 	height: 576px;
 	min-width: 1920px;
