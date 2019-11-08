@@ -11,6 +11,7 @@ margin:  0 auto;
 	height: 550px;
 	margin: 0 auto;
 }
+/* 标题一 */
 .a_title{
 	width: 256px;
 	height: 230px;
@@ -27,6 +28,7 @@ margin:  0 auto;
 .a_title p{text-align: center;
 color: #333;
 font-size: 14px;}
+/* 轮播图 */
 .a_pic{
 	height: 500px;
 	margin: auto;
@@ -36,3 +38,40 @@ font-size: 14px;}
 	height: 371px;
 	margin: 0 auto;
 }
+/* 标题二 */
+.a_title1{
+	width: 256px;
+	height: 230px;
+}
+.a_title1 h1{
+	font-size: 40px;
+	color: #000000;
+	font-weight: bold;
+	margin: 0 auto;
+	line-height: 100px;
+	margin-top: 55px;
+	text-align: center;
+}
+.a_title1 p{text-align: center;
+color: #333;
+font-size: 14px;}
+.a_pho{
+	height: 550px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+}
+.a_pho a{
+	display: inline-block;
+	width: 312px;
+	height: 403px;
+	margin-left: 16px;
+	margin-top: 80px;
+}
+.a_pho img{
+	width: 312px;
+	height: 403px;
+}
+.a_vio{display: flex;
+justify-content: space-around;}
