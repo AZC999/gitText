@@ -2,14 +2,14 @@ $(function(){
     // var date=new Date();
     // date.setDate(date.getDate()+10);
     // setCookie("uname","tom",date,"/");
-    if(!!document.cookie){
-        var name=document.cookie.split("=")[1];
-        $(".showName").html("你好,"+name+"<a class='signOut'>[退出]</a>");
-    }
-    $(".signOut").click(function(){
-        $(".showName").html("<a rel='nofollow' href='../../hezhen/login/login.html'>登录</a>" 
-        +"/"+"<a rel='nofollow' href='../../zhanwen/register.html'>注册</a>")
-    })
+    // if(!!document.cookie){
+    //     var name=document.cookie.split("=")[1];
+    //     $(".showName").html("你好,"+name+"<a class='signOut'>[退出]</a>");
+    // }
+    // $(".signOut").click(function(){
+    //     $(".showName").html("<a rel='nofollow' href='../../hezhen/login/login.html'>登录</a>" 
+    //     +"/"+"<a rel='naofollow' href='../../zhanwen/register.html'>注册</a>")
+    // })
      //头left的隐藏
      $("#header-vue-left div a").hover(function(){
          $(this).addClass("active").siblings().removeClass("active");

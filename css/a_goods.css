@@ -38,7 +38,8 @@ body{
 	color: #FFFFFF;	
 	padding-left: 20px;
 }
-#header-vue-left a:hover{opacity: 0.5;}
+#header-vue-left a:hover{opacity: 0.5;
+text-decoration: none;}
 #header-vue-left ul{
 	position: relative;
 }
@@ -52,6 +53,8 @@ body{
 	float: right;
 	margin-right: 120px;
 }
+#header-vue-right a:hover{opacity: 0.5;
+text-decoration: none;}
 #header-vue-right>ol{
 	width: 260px;
 }
@@ -66,12 +69,34 @@ body{
 #header-vue-right>ol li a{
 	color: #FFFFFF;
 }
+/* logo区 */
+.a_container{
+	width: 1105px;
+	margin: 0 auto;
+}
+.logo{
+	height:231px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding-top: 100px;
+	box-sizing: border-box;
+}
+.logo img{width: 98px;
+height: 58px;
+margin:0 auto;
+margin-top: 60px;}
+.logo a{
+	display: block;
+	width: 98px;
+	height: 58px;
+	margin:  0 auto;
+}
 #notice{
 	position: relative;
 }
 #notice-hd{
 	width: 260px;
-	height: 100px;
+	height: 58px;
 	position: absolute;
 	right: 0px;
 	top:40px;
@@ -239,6 +264,9 @@ body{
 	color: #FFFFFF;
 	
 }
+#footer-container ul li a:hover{
+	text-decoration: none;
+}
 .content{
 
 	overflow: hidden;
@@ -246,7 +274,8 @@ body{
 .content>ul>li:nth-child(1) a{
 	color: #fff;
 }
-.content ul li a:hover{color: #FFFFFF;}
+.content ul li a:hover{color: #FFFFFF;
+text-decoration: none;}
 .content ul{
 	float: left;
 	margin-right: 80px;	
@@ -294,9 +323,11 @@ body{
 #friendly ul li a{
 	color: #FFFFFF;
 }
+#friendly ul li a:hover{text-decoration: none;}
 .copyright{
 	color: #FFFFFF;
 }
 #container .copyright a{
 	color: #FFFFFF;
 }
+#container .copyright a:hover{text-decoration: none;}
