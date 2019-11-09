@@ -1,13 +1,13 @@
-.a_banner{width: 1920px;
+.a_banner{width: 1350px;
 margin: 0 auto;
 }
-.a_banner img{width: 1920px;
+.a_banner img{width: 1350px;
 height: 550px;
 margin:  0 auto;
 }
 .a_banner a{
 	display: block;
-	width: 1920px;
+	width: 1350px;
 	height: 550px;
 	margin: 0 auto;
 }
@@ -75,3 +75,13 @@ font-size: 14px;}
 }
 .a_vio{display: flex;
 justify-content: space-around;}
+.a_downpic{
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.a_downpic video{background-color: #000000;}
+.a_downpic a{margin-top: 50px;
+width: 1184px;
+height: 490px;}
+.a_downvideo{margin:0 auto;}

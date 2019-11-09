@@ -1,0 +1,385 @@
+html,body,ul,li,form,input,span,ol,li,dl,dd,dt,table,tr,td,p,h1,h2,h3,h4,h5,
+h6,img,a,em,i,b{padding: 0;margin: 0;}
+ul li,ol li{list-style: none;}
+a{text-decoration: none;color:#666;cursor: pointer;}
+a:hover{
+	text-decoration: underline;
+}
+img{
+	border: none;
+}
+i,em{
+	font-style: normal;
+}
+h2,h3{
+	font-weight: normal;
+}
+body{
+	font-family: "微软雅黑" ;font-size:12px;
+}
+.clearfix:after{
+	content:"";clear: both;display: block;font-size: 0;height: 0;
+	overflow: hidden;visibility: hidden;
+}
+#header-vue{
+	width: 100%;
+	height: 40px;
+	background: #333;
+	font-size: 12px;	
+}
+#header-vue-left{
+	margin-left: 120px;
+	width: 150px;
+	height: 40px;
+	float: left;
+}
+#header-vue-left a{
+	line-height: 40px;
+	color: #FFFFFF;	
+	padding-left: 20px;
+}
+#header-vue-left ul{
+	position: relative;
+}
+#header-vue-left ul li{
+	position: absolute;
+	display: none;
+	height: 200px;
+	text-align: center;
+}
+#header-vue-right{
+	float: right;
+	margin-right: 120px;
+	
+}
+#header-vue-right>ol{
+	width: 260px;
+}
+#header-vue-right>ol>li{
+	line-height: 40px;
+	text-align:center;
+	margin-right: 10px;
+	margin-left: 10px;
+    float: left;
+    color: white;
+}
+#header-vue-right>ol li a{
+	color: #FFFFFF;
+}
+#notice{
+	position: relative;
+}
+#notice-hd{
+	width: 260px;
+	height: 100px;
+	position: absolute;
+	right: 0px;
+	top:40px;
+	display: none;
+}
+#notice-hd li{
+	height: 30px;
+	text-align:center;
+	border: 1px solid #E7E1CD;
+	line-height: 30px;
+}
+#goods-seat{
+    width: 1190px;
+    margin: 3px auto;
+    line-height: 60px;
+}
+#goodsWrap{
+    width: 1190px;
+    margin: 0 auto;
+    padding: 44px 0 60px;
+    overflow: hidden;
+    position: relative;
+}
+#goodsWrap .small{
+    width: 480px;
+    height: 480px;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+#goodsWrap .small img{
+    vertical-align: middle;
+    width: 240px;
+    height: 240px;
+}
+#goodsWrap .small span{
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle
+}
+#goodsWrap .small .mask{
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    background: #ccc;
+    opacity: 0.5;
+    display: none;
+}
+#goodsWrap .big{
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    left: 560px;
+    top: 110px;
+    border: 1px solid black;
+    display: none;
+    overflow: hidden;
+}
+#goodsWrap .big img{
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#goodsWrap .describe{
+    float: left;
+    width: 600px;
+    height: 600px;
+    padding: 0 0 0 80px;
+}
+#goodsWrap .describe h1{
+    font-size: 16px;
+    margin-top: 25px;
+    font-weight: normal;
+}
+#goodsWrap .describe>p{
+    margin-top: 50px ;
+    padding: 4px 0 50px;
+    border-bottom: 1px dotted #ccc;
+}
+#goodsWrap .describe>p span{
+    font-size: 30px;
+    font-weight: bold;
+}
+#goodsWrap .describe .buy{
+    overflow: hidden;
+}
+#goodsWrap .describe .buy .color .bc{
+    border-color: red;
+}
+#goodsWrap .describe .buy .color{
+    height: 40px; 
+    margin: 20px 0;
+}
+#goodsWrap .describe .buy .color a{
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    border: 1px solid black;
+}
+#goodsWrap .describe .buy .color a img{
+    width: 40px;
+    height: 40px;
+}
+#goodsWrap .describe .buy .size span{
+    display: inline-block;
+    width: 400px;
+    margin:0 10px 0;
+    height: 100%;
+    vertical-align: top;
+}
+#goodsWrap .describe .buy .size span a{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 0 4px;
+    margin: 0 8px 10px; 
+}
+#goodsWrap .describe .buy .size .showSize{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 783px;
+    height: 175px;
+    display: none;
+}
+#goodsWrap .describe .buy .size .showSize .close{
+    position: absolute;
+    top: 7px;
+    left: 755px;
+    font-size: 20px;
+    width: 17px;
+    height: 17px;
+}
+#goodsWrap .describe .buy .size .noChoose{
+    width: 600px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    left: 400px;
+    top: 360px;
+    background: white;
+}
+#goodsWrap .describe .buy .size .noChoose p{
+    background: black;
+    color: white;
+    line-height: 28px;
+    font-weight: bold;
+    text-indent: 10px;
+    margin-bottom: 20px;
+}
+#goodsWrap .describe .buy .size .noChoose p a{
+    float: right;
+    width: 20px;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+}
+#goodsWrap .describe .buy .size .noChoose button{
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    background: black;
+    color: white;
+    border: 0;
+    margin-left: 50px;
+    display: none;
+    cursor: pointer;
+}
+#goodsWrap .describe .buy .num {
+    display: flex;
+    margin: 25px 0 40px;
+}
+#goodsWrap .describe .buy .num .left{
+    height: 30px;
+}
+#goodsWrap .describe .buy .num .left input{
+    display: inline-block;
+    width: 60px;
+    height: 100%;
+    vertical-align: top;
+}
+#goodsWrap .describe .buy .num p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#goodsWrap .describe .buy .num p button{
+    width: 18px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    margin: 0 2px 5px;
+    border: 0;
+    outline: none;
+}
+#goodsWrap .describe .buy>a{
+    display: inline-block;
+    width: 224px;
+    height: 48px;
+    border: 0;
+    text-align: center;
+    line-height: 48px;
+    background: black;
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#goodsWrap .describe .buy .purchase{
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+#footer{
+	background:#333;
+	height: 100%;
+}
+#footer-container{
+	width: 1190px;
+	height: 116px;
+	margin: 0 auto;
+}
+#footer-top{
+	border-bottom: 1px solid #FFFFFF;
+	overflow: hidden;
+	
+}
+#footer-container ul li{
+	line-height: 116px;
+	float: left;
+	margin-right: 50px;
+}
+#footer-container ul li a{
+	font-size: 20px;
+	color: #FFFFFF;
+	
+}
+.content{
+
+	overflow: hidden;
+}	
+.content>ul>li:nth-child(1) a{
+	color: #fff;
+}
+
+.content ul{
+	float: left;
+	margin-right: 80px;	
+}				
+.content ul	li{
+	margin-top:20px;
+}
+.certification{
+	height: 210px;
+	width: 1190px;
+}
+.certification ul{
+	float: left;	
+}
+.certification ol{
+	float: left;
+	margin-left: 200px;
+	margin-top: 60px;
+}
+.certification ol li{
+	float: left;
+	margin-left: 20px;
+	text-align: center;
+	color: #ffffff;
+}
+.certification ul li{
+	float: left;
+	margin-top: 160px;
+	margin-right: 10px;
+}
+#friendly{
+	height: 60px;
+}
+#friendly ul li{
+	float: left;
+	width: 62px;
+	height: 20px;
+	border-right: 1px solid #666;
+	margin: 20px 15px 20px 0;
+	
+}
+#friendly ul li:nth-child(6){
+	border-right:none;
+}
+#friendly ul li a{
+	color: #FFFFFF;
+}
+.copyright{
+	color: #FFFFFF;
+}
+#container .copyright a{
+	color: #FFFFFF;
+}

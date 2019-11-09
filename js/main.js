@@ -1,0 +1,9 @@
+requirejs.config({
+    paths:{
+        "jquery":"jquery.min",
+        "showImg":"showImg",
+    }
+})
+require(["jquery","showImg"],function($,obj){
+    obj.event($);
+})
