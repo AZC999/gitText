@@ -12,6 +12,7 @@
     <script src="../js/showImg.js"></script>
     <script src="../js/cookie.js"></script>
 </head>
+
 <body>
     <!--公共头部-->
     <div id="header-vue">
@@ -76,7 +77,7 @@
         <div id="nav">
             <div id="nav-top">
                 <a id="zhaopian">
-                    <img src="../img/first(34).png"/>
+                    <img src=""/>
                 </a>				
             </div>
             <div id="nav-buttom">
@@ -363,20 +364,71 @@
 		<p>男女鞋   运动</p>
 	</div>
 	<!-- 轮播图 -->
-	<div class="a_pic a_container">
-		   <div class="a_swiperBox">
-			 <div class="a_inpic active">
-		     <img  src="../img/pic1.jpg" alt="">
-		     <img src="../img/pic2.jpg" alt="">
-		     <img src="../img/pic3.jpg" alt="">
-		     <img src="../img/pic4.jpg" alt="">
-			 </div>
-		   </div>
-		   <ul class="a_nav2">
-		     <li class="active">1</li>
-		     
-		   </ul>
-		 </div>
+	<div class="a_pic a_container">	
+			<div class="a_swiperBox">
+				<ul>
+					<li class="active"><a href="" title="简约短靴">
+					<img src="../img/pic1.jpg" width="235" height="296" />
+					<h1>BELLE</h1>
+					<h2>运动休闲</h2>
+					<span>￥869</span>
+					</a>
+					</li>
+					<li><a href="" title="时尚简约皮鞋">
+					<img src="../img/pic2.jpg" width="235" height="296" />
+					<h1>BATA</h1>
+					<h2>时尚简约皮鞋</h2>
+					<span>￥688</span>
+					</a>
+					</li>
+					<li><a href="" title="运动休闲" >
+					<img src="../img/pic3.jpg" width="235" height="296" />
+					<h1>CAT</h1>
+					<h2>时尚女鞋</h2>
+					<span>￥969</span>
+					</a>
+					</li>
+					<li><a href="" title="简约短靴">
+					<img src="../img/pic4.jpg" width="235" height="296" />
+					<h1>BELLE</h1>
+					<h2>简约短靴</h2>
+					<span>￥869</span>
+					</a>
+					</li>
+				</ul>
+				<ul>
+					<li><a href="" title="简约短靴">
+					<img src="../img/pic4.jpg" width="235" height="296" />
+					<h1>BELLE</h1>
+					<h2>运动休闲/h2>
+					<span>￥869</span>
+					</a>
+					</li>
+					<li><a href="" title="时尚简约皮鞋">
+					<img src="../img/pic3.jpg" width="235" height="296" />
+					<h1>BATA</h1>
+					<h2>时尚简约皮鞋</h2>
+					<span>￥688</span>
+					</a>
+					</li>
+					<li><a href="" title="运动休闲" >
+					<img src="../img/pic2.jpg" width="235" height="296" />
+					<h1>CAT</h1>
+					<h2>时尚女鞋</h2>
+					<span>￥969</span>
+					</a>
+					</li>
+					<li><a href="" title="简约短靴">
+					<img src="../img/pic1.jpg" width="235" height="296" />
+					<h1>BELLE</h1>
+					<h2>简约短靴</h2>
+					<span>￥869</span>
+					</a>
+					</li>
+				</ul>
+				
+			</div>
+			
 	</div>
 	<!-- 标题二 -->
 		<div class="a_title1 a_container">
@@ -414,7 +466,7 @@
 		<div id="footer">
 		    <div id="footer-top">
 		        <div id="footer-container">
-		            <ul>
+		            <ul >
 		                <li>
 		                    <a href="#"><i style="font-size: 27px;" class="iconfont">&#xe665;</i>&nbsp;正品保证</a>
 		                </li>
@@ -514,103 +566,77 @@
 		        </div>
 		    </div>
 		</div>
+		<div id="a_box">
+		  <a href="">返回顶部</a>
+		</div>
+	</body>
 	<script>
+	  var oUl = document.querySelectorAll('ul');
 	  var oLis = document.querySelectorAll('li');
-	  var oImgs = document.querySelectorAll('.swiperBox img');
 	
 	  var index = 0;
 	  var timer;
 	
 	  start();
 	
-	  for (var i = 0; i < oLis.length; i++) {
-	    oLis[i].index = i;
-	    oLis[i].onmouseenter = function () {
+	  for (var i = 0; i < oUl.length; i++) {
+	   oUl[i].index = i;
+	   oUl[i].onmouseenter = function () {
 	      clearInterval(timer);
 	      // this.index
 	      index = this.index;
 	      activeOne();
 	    }
 	
-	    oLis[i].onmouseleave = function () {
+	    oUl[i].onmouseleave = function () {
 	      start();
 	    }
 	  }
 	
 	  function activeOne() {
 	    // 清除所有的激活状态
-	    for (var i = 0; i < oLis.length; i++) {
-	      oImgs[i].classList.remove('active');
+	    for (var i = 0; i < oUl.length; i++) {
 	      oLis[i].classList.remove('active');
+	      oUl[i].classList.remove('active');
 	    }
 	
-	    oImgs[index].classList.add('active');
 	    oLis[index].classList.add('active');
+	    oUl[index].classList.add('active');
 	  }
 	
 	  function start() {
 	    timer = setInterval(function () {
 	      index++;
-	      if (index > oLis.length - 1) {
+	      if (index > oUl.length - 1) {
 	        index = 0;
 	      }
 	      activeOne();
-	    }, 2000);
+	    }, 1000);
 	  }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	  // var oImgs = document.querySelectorAll('.swiperBox img');
-	  // var oLis = document.querySelectorAll('.nav li');
-	  // var index = 0;
-	  // var timer;
-	  // start();
-	  // for (var i = 0; i < oLis.length; i++) {
-	  //   oLis[i].index = i;
-	  //   oLis[i].onmouseenter = function () {
-	  //     clearInterval(timer);
-	  //     index = this.index;
-	  //     activeOne();
-	  //   }
-	
-	  //   oLis[i].onmouseleave = function () {
-	  //     start();
-	  //   }
-	  // }
-	
-	  // function start() {
-	  //   clearInterval(timer);
-	  //   timer = setInterval(function () {
-	  //     index++;
-	  //     if (index > 3) {
-	  //       index = 0;
-	  //     }
-	  //     activeOne();
-	  //   }, 2000)
-	  // }
-	
-	  // function activeOne() {
-	  //   for (var i = 0; i < oLis.length; i++) {
-	  //     oImgs[i].classList.remove('active');
-	  //     oLis[i].classList.remove('active');
-	  //   }
-	  //   oImgs[index].classList.add('active');
-	  //   oLis[index].classList.add('active');
-	  // }
-	</script>
-	
-	<!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
-	<script type="text/javascript">
-		$('.head').load('head.html');
+	  
 	</script>
 	<script type="text/javascript">
-		$('.footer').load('foot.html');
-	</script> -->
+		var oBox = document.getElementById('#a_box');
+		var timer;
+		
+		oBox.onclick = function () {
+		
+		  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		  // 确保只有一个定时器
+		  clearInterval(timer);
+		  timer = setInterval(function () {
+		    // 速度
+		    scrollTop -= 10;
+		    console.log(scrollTop);
+		
+		    if (scrollTop <= 0) {
+		      clearInterval(timer);
+		      scrollTop = 0;
+		    }
+		    // 兼容
+		    document.documentElement.scrollTop = scrollTop;
+		    document.body.scrollTop = scrollTop;
+		  }, 30);
+		}
+	</script>
 	</html>
