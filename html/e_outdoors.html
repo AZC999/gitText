@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>户外</title>
+</head>
+<link rel="stylesheet" href="../css/a_reset.css">
+<link rel="stylesheet" type="text/css" href="../css/font/iconfont.css" />
+<link rel="stylesheet" href="../css/e_outdoors.css">
+<link rel="stylesheet" href="../css/a_goods.css">
+<link rel="stylesheet" href="../css/a_footer.css">
+
+<body>
+  <!-- 头部 -->
+  <div id="head"></div>
+  <!-- 中间部分 -->
+  <div class="filter-wrap">
+    <div class="filter-title-list">
+      <ul class="menu-list">
+        <li>
+          <a href="/">首页</a>
+          <span>>&nbsp;</span>
+        </li>
+        <li>
+          <a href="/">户外</a>
+        </li>
+      </ul>
+    </div>
+    <!-- filter-sub-wrap -->
+    <div class="filter-sub-wrap">
+        <div class="filter-sub-navlist">
+            <p>
+              共<span class="res"></span>个结果
+            </p>
+            <form method="get">
+              <ul class="filter-list-wrap">
+                <li>
+                  <p><i></i>品牌</p>
+                </li>
+                <li>
+                  <p><i></i>品类</p>
+                </li>
+                <li>
+                  <p><i></i>性别</p>
+                </li>
+                <li>
+                  <p><i></i>价格</p>
+                </li>
+                <li>
+                  <p><i></i>尺码</p>
+                </li>
+                <li>
+                  <p><i></i>颜色</p>
+                </li>
+                <li>
+                  <p><i></i>运动款式</p>
+                </li>
+                <li>
+                  <p><i></i>鞋类流行款式</p>
+                </li>
+                <li>
+                  <p><i></i>款式季节</p>
+                </li>
+                <li>
+                  <p><i></i>面料材质</p>
+                </li>
+              </ul>
+            </form>
+        </div>
+        <div class="filter-sub-content">
+            <div class="sub-wrap">
+              <div class="sub-tab-title">
+                <ul class="sub-title-tab">
+                  <li><a title="新品" class="active" href="">新品</a></li>
+                  <li><a title="热销" class="active" href="">热销</a></li>
+                  <li><a title="推荐" class="active" href="">推荐</a></li>
+                  <li><a title="价格" class="active" href="">价格</a></li>
+                  <li><a title="折扣" class="active" href="">折扣</a></li>
+                </ul>
+                <div class="page-sum">
+                  <span>1</span>
+                  -
+                  <span>47</span>
+                  页
+                  <span>
+                    <span></span>
+                    <a href="">下一页</a>
+                  </span>
+                </div>
+              </div>
+              <div class="actt_panel sub-goods-list" id="commodity_part_result">
+                <div class="actt_panel_bd">
+                  <ul class="proList new_prdlist" id="proList">
+                    <!-- <li>
+                      <div class="srchlst-wrap">
+                        <div class="hd goods-head">
+                          <a href="" target="_blank">
+                            <img src="../101275105_01_mb.jpg" alt="">
+                          </a>
+                        </div>
+                        <div class="bd goods-desc">
+                          <span class="nptt">
+                            <a href="">Nike耐克2019年新款女子AS W NSW PANT BB SHINE长裤BV5034-010</a>
+                          </span>
+                          <p class="price_sc price_wrap">
+                            <em class="cur_price">
+                              ￥&nbsp;<i>409</i></em>
+                            <del class="origin-price">
+                              ￥&nbsp;<i>549</i></del>
+                          </p>
+                        </div>
+                      </div>
+                    </li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- 分页部分 -->
+  <div class="newPage">
+      <div class="d_pa clearfix fr mb20 mr40">
+        <a href="#"> &lt;上一页 </a>
+        <a href="#" class="curr abtn">1</a>
+        <a href="#" class="abtn">2</a>
+        <a href="#" class="abtn">3</a>
+        <a href="#">下一页&gt;</a>
+      </div>
+  </div>
+
+  <div id="foot"></div>
+</body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/showImg.js"></script>
+<!-- 中间部分 -->
+<script>
+    var jsons = 0
+    $(function () {
+      $.ajax({
+        url: '../JSON/e_outdoors.json',
+        type: "get",
+        dataType: 'json',
+        cache: false,
+        success: function (json) {
+          jsons = json
+          console.log(json)
+          for (var n = 0; n < 20; n++) {
+            every(jsons[n])
+          }
+        }
+      })
+    })
+
+
+    $('.abtn').bind("click", function () {
+      $('a').removeClass('curr')
+      $(this).addClass('curr')
+      var as1 = $('.abtn')
+      var head1 = ($(this).html() - 1) * 20
+      var foot1 = $(this).html() * 20
+      $('.new_prdlist').empty()
+      for (var n = head1; n < foot1; n++) {
+        every(jsons[n])
+      }
+    })
+
+    //封装这个函数
+    function every(data) {
+      var results = '';
+      results +=
+        `<li>
+              <div class="srchlst-wrap">
+                  <div class="hd goods-head">
+                    <a href="" target="_blank">
+                      <img src="${data.imgurl}" alt="">
+                    </a>
+                  </div>
+                    <div class="bd goods-desc">
+                      <span class="nptt">
+                        <a href="">${data.title}</a>
+                      </span>
+                      <p class="price_sc price_wrap">
+                        <em class="cur_price">
+                          ￥&nbsp;<i>${data.price1}</i>
+                        </em>
+                        <del class="origin-price">
+                          ￥&nbsp;<i>${data.price2}</i>
+                        </del>
+                      </p>
+                    </div>
+              </div>
+        </li>`;
+      $('.proList.new_prdlist').append(results)
+    }
+  </script>
+  <!-- 给li添加hover事件 -->
+  <script>
+    $('li').hover(function () {
+      $(this).addClass("hover")
+    }, function () {
+      $(this).removeClass("hover")
+    })
+  </script>
+<!-- 底部 -->
+<script>
+  $('#foot').load("foot.html")
+</script>
+</html>
