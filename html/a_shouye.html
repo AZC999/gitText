@@ -7,24 +7,24 @@
     <title>首页</title>
     <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css"/>
     <link rel="stylesheet" href="../css/a_goods.css">
-	<link rel="stylesheet" href="../css/a_shouye.css">
+	<link rel="stylesheet" href="../css/a_footer.css">
    
 </head>
 
 <body>
     <!--公共头部-->
-	<div class="head"></div>
+	<div id="head" class="clearfix"></div>
    
-	<div class="a_banner a_container">
+	<div class="a_banner a_container" class="clearfix">
 		<a href=""><img src="../img/banner.jpg"></a>      
 	</div>
 	<!-- 标题一 -->
-	<div class="a_title a_container">
+	<div class="a_title a_container" class="clearfix">
 		<h1>新品推荐</h1>
 		<p>男女鞋   运动</p>
 	</div>
 	<!-- 轮播图 -->
-	<div class="a_pic a_container">	
+	<div class="a_pic a_container" class="clearfix">	
 			<div class="a_swiperBox">
 				<ul>
 					<li class="active"><a href="" title="简约短靴">
@@ -91,30 +91,37 @@
 			
 	</div>
 	<!-- 标题二 -->
-		<div class="a_title1 a_container">
+		<div class="a_title1 a_container" class="clearfix">
 			<h1>今日主推大牌</h1>
 			<p>男女鞋   运动</p>
 		</div>
 		<!-- 图片 -->
-		<div class="a_pho a_container">
+		<div class="a_pho a_container" class="clearfix">
 			<a href=""><img src="../img/pic7.jpg" alt=""></a>
+		<div class="a_phoimg">
+			<h1>BELLE</h1>
+		</div>
 			<a href=""><img src="../img/pic8.jpg" alt=""></a>
+			<div class="a_phoimg">
+				<h1>BELLE</h1>
+			</div>
 			<a href=""><img src="../img/pic9.jpg" alt=""></a>
 			
 		</div>
+		
 		<div class="a_title2 a_container">
 			<h1>品牌潮流资讯</h1>
 			<p>BRAND FASHION</p>
 		</div>
 		<!-- 视频 -->
-		<div class="a_vio a_container">
-			<a href=""><video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/bai_li_(2).jpg" style="background-color:#000;" controlslist="nodownload" onclick="playPause(this)" width="315" height="458" controls="controls">
+		<div class="a_vio a_container" class="clearfix">
+			<video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/bai_li_(2).jpg" style="background-color:#000;" controlslist="nodownload" onclick="playPause(this)" width="315" height="458" controls="controls">
 	              <source src="../img/video2.mp4">
 	          
-				</video></a>
-			<a href=""><video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/si_jia_tu_(2).jpg" style="background-color:#000;" controlslist="nodownload" onclick="playPause(this)" width="315" height="458" controls="controls">
+				</video>
+			<video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/si_jia_tu_(2).jpg" style="background-color:#000;" controlslist="nodownload" onclick="playPause(this)" width="315" height="458" controls="controls">
               <source src="../img/video1.mp4">
-          </video></a>
+          </video>
 			<a href=""><img src="../img/pic12.jpg" alt=""></a>
 		</div>
 		<!-- 底部图片 -->
@@ -126,15 +133,15 @@
 		</div> -->
 		
 		<!-- 佟丽娅代言视频 -->
-		<div class="a_downvideo a_container">
-			<video class="video" poster="//i1.ygimg.cn/pics/shop/zt/yn/pin_pai_shi_pin_.jpg" style="background-color:#000;text-align: center;" controlslist="nodownload" onclick="playPause(this)" width="1150" height="444" controls="controls" >
+		<div class="a_downvideo a_container " class="clearfix">
+			<video class="video" poster="//i1.ygimg.cn/pics/shop/zt/yn/pin_pai_shi_pin_.jpg" style="background-color:#000;text-align: center;" controlslist="nodownload" onclick="playPause(this)" width="1078" height="450" controls="controls" >
 			<source src="../img/video3.mp4">
 			</video>
 		</div>
 		<!-- <div class="a_lastpic a_container">
 			<a href=""><img src="../img/pic27.jpg" alt=""></a>
 		</div> -->
-		<div id="clothesBox">
+		<!-- <div id="clothesBox">
 		    <div class="topic">
 		        <h3>时尚女鞋</h3>
 		    </div>
@@ -150,7 +157,7 @@
 		    </div>
 		    <ul class="exercise">
 		    </ul>
-		</div>
+		</div> -->
 		<!-- 底部 -->
 		<div class="foot"></div>
 		
@@ -228,8 +235,6 @@
 		}
 	</script> -->
 	<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
-	
-	
 	<script type="text/javascript">
 	    $("#div").hover(function () {
 	        $("#mengban").show()
