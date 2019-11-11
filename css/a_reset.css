@@ -12,7 +12,8 @@ ul li,ol li{
 	list-style: none;
 }
 img{
-	border: none; vertical-align: top;
+	border: none;
+	/* vertical-align: top; */
 }
 body{
 	font-family: "微软雅黑"; font-size: 12px;
@@ -23,7 +24,7 @@ a{text-decoration: none;}
 	clear: both;
 }
   
-@charset "utf-8";
+
 /* CSS Document */
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption{
 	margin:0;

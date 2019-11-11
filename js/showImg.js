@@ -27,7 +27,6 @@ $('#head').load("head.html", function () {
     }, function () {
         $("#notice-hd").hide();
     });
-
     //导航选项卡
     $(".on").on({
         mouseenter: function () {
