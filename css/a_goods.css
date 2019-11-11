@@ -284,8 +284,6 @@ justify-content: space-around;
 margin: 50px auto;
 margin-bottom: 50px;
 box-sizing: border-box;} 
-.a_downpic img:hover{opacity: 0.5;
-border-radius: 50%;}
 .a_downvideo{width: 1078px;
 height: 450px;
 margin-top: 30px;
@@ -297,40 +295,77 @@ margin-bottom: 30px;}
 object-fit:fill;
 }
 .a_downvideo video:hover{}
-.a_pho{
-	width: 1150px;
-	height: 550px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-around;
-	box-sizing: border-box;
+#content{display: flex;
+justify-content: space-around;
+width: 1150px;
+margin: 0 auto;}
+#content article {
+max-width: 236px;
+position: relative;
+margin-bottom: 3.5%;
+margin-left: -2px;
+margin-top: 30px;
 }
-.a_pho a{
-	display: inline-block;
-	width: 312px;
-	height: 403px;
-	margin-top: 80px;
-	position: relative;
+
+#content article:nth-child(4n+4) {
+margin-right: 0;
+box-sizing: border-box;
 }
-.a_pho img{
-	width: 312px;
-	height: 403px;
-	position: relative;
+.post-format-content {
+position: relative;
+background: #111;
 }
-.a_phoimg{display: none;
+.post-thumbnail {
+max-width: 100%;
+height: auto;
+overflow: hidden;
+}
+.content-wrap {
+padding: 0;
 position: absolute;
-left: 0;
-top:0;
-right: 0;
+text-align: center;
+width: 100%;
+top: 0;
 bottom: 0;
-width: 312px;
-height: 403px;
-background-color: #000000;
-opacity: 0.5;
+display: table-cell;
+vertical-align: middle;
+overflow: hidden;
 }
-.a_pho img:hover {width: 350px;
-height: 450px;
-border: 2px solid #55A532;
+.content-wrap h1.entry-title {
+display: table;
+font-size: 110%;
+height: 100%;
+text-transform: uppercase;
+width: 100%;
+margin:0;
+}
+.edit-link {
+z-index: 2;
+}
+.featured-image {
+display: table-cell;
+position: relative;
+transition: opacity .25s ease-in-out, background .25s ease-in-out;
+-moz-transition: opacity .25s ease-in-out, background .25s ease-in-out;
+-webkit-transition: opacity .25s ease-in-out, background .25s ease-in-out;
+vertical-align: middle;
+z-index: 1;
+color: #fff;
+text-decoration: none;
+opacity: 0;
+padding: 10%;
+}
+.featured-image:hover {
+opacity: 0.9;
+color: #fff;
+background: rgba(0,0,0,0.8);
+}
+.post-thumbnail img {
+display: block;
+}
+img {
+max-width: 100%;
+height: auto;
 }
 .a_vio{display: flex;
 justify-content: space-around;}
