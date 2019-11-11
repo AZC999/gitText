@@ -52,14 +52,14 @@ $(function(){
 
     //密码正则验证
     function pwdVerify(){
-        var pwdReg = /^\w|[!,@,#,$,%,^,&,*,?,_,~,.]{6,25}$/;//字母、数字、符号均可，6-25个字符以内
+        // var pwdReg = /\w|[!,@,#,$,%,^,&,*,?,_,~,.]{6,25}/;//字母、数字、符号均可，6-25个字符以内
+        var pwdReg = /[!,@,#,$,%,^,&,*,?,_,~,.]|\w{6,25}/;
         var pwdVal = $('.jxj').val();
         if(pwdReg.test(pwdVal)){
             return true;
         }else{
             return false;
         }
-        
     }
 
      //手机号验证
@@ -69,7 +69,7 @@ $(function(){
             if(phoneVerify()){
                 $.ajax({
                     type: 'get',
-                    url: './../php/register.php',
+                    url: './../php/inquire.php',
                     cache: false,
                     data: 'uphone=' + $(_this).val(),
                     dataType: 'text',
@@ -104,6 +104,7 @@ $(function(){
                 flag_2 = true;
                 $(_this).parent().removeClass('frame-style').parent().next().children().removeClass('pp').html('');
             }else{
+                $(_this).parent().addClass('frame-style').parent().next().children().addClass('pp').html('验证码不正确');
                 flag_2 = false;
             }
         }else{
@@ -136,11 +137,14 @@ $(function(){
         if($(_this).val()){
             if(Six_code === $(_this).val()){
                 $(_this).parent().parent().next().children().html('');
+                flag_3 = true;
             }else{
                 $(_this).parent().addClass('frame-style').parent().next().children().addClass('pp').css('color','#000').html('短信验证码不正确');
+                flag_3 = false;
             }
         }else{
             $(_this).parent().addClass('frame-style').parent().next().children().addClass('pp').html('请输入短信验证码');
+            flag_3 = false;
         }
     }
     $('.yxy').blur(function(){
@@ -153,11 +157,14 @@ $(function(){
         if($(_this).val()){
             if(pwdVerify()){
                 $(_this).parent().removeClass('frame-style').next().children().addClass('righttips').html('');
+                flag_4 = true;
             }else{
                 $(_this).parent().addClass('frame-style').next().children().html('请输入密码');
+                flag_4 = false;
             }
         }else{
             $(_this).parent().addClass('frame-style').next().children().addClass('pp').html('请输入密码');
+            flag_4 = false;
         }
     }
     
@@ -198,11 +205,18 @@ $(function(){
         }
 
         if(flag >= 2){//两种组合密码为中级
+            flag_4 = true;
             if(flag >= 3){//三种组合密码为中级
                 $('.pwd-extent em').eq(2).addClass('pwdlow').siblings().removeClass('pwdlow');
             }else{
                 $('.pwd-extent em').eq(1).addClass('pwdlow').siblings().removeClass('pwdlow');
             }
+        }else{
+            flag_4 = false;
+        }
+
+        if(pwdVal.length >= 25){
+            this.value = pwdVal.substr(0,25);
         }
         
     })
@@ -210,31 +224,54 @@ $(function(){
         jxj(this);
     })
 
+    //确认密码验证
     function exe(_this){
         $(_this).parent().next().children().removeClass('pp righttips')
         if($(_this).val()){
             if($(_this).val().length >= 6){
                 if($(_this).val() === $('.jxj').val()){
                     $(_this).parent().next().children().addClass('righttips').removeClass('pp').html('');
+                    flag_5 = true;
                 }else{
                     $(_this).parent().next().children().addClass('pp').removeClass('righttips').html('两次密码输入不一致');
+                    flag_5 = false;
                 }
             }else{
                 $(_this).parent().next().children().addClass('pp').removeClass('righttips').html('密码应6-25位之间');
+                flag_5 = false;
             }
         }else{
             $(_this).parent().next().children().addClass('pp').html('请输入确认密码');
+            flag_5 = false;
         } 
     }
-        
-    //确认密码验证
     $('.exe').blur(function(){
         // $(this).parent().addClass('frame-style');
         exe(this);
     })
 
     //点击确认并提交
+    function sub(){
+        txt('.txt');
+        dxd('.dxd');
+        yxy('.yxy');
+        jxj('.jxj');
+        exe('.exe');
+        if(flag_1 && flag_2 && flag_3 && flag_4 && flag_5){
+            $.ajax({
+                type: 'get',
+                url: '',
+                cache: 'false',
+                data: 'uphone=' + $('.txt').val()&'upwd=' + $('.jxj').val(),
+                success: function(data){
+
+                }
+            })
+        }else{
+            alert('注册失败');
+        }
+    }
     $('.sub').click(function(){
-        txt();
+        sub();
     })
 })
