@@ -2,6 +2,7 @@
     height: 69px;
     width: 100%;
 }
+
 #register .register-box{
     width: 990px;
     height: 69px;
@@ -56,11 +57,11 @@
     background: white;
     overflow: hidden;
 }
-#banner .banner-data-box div:nth-of-type(1){
+#banner .banner-data-box .banner-data-top{
     margin: 24px 15px 0 15px;
     border-bottom: 1px solid #f3f3f3;
 }
-#banner .banner-data-box div:nth-of-type(1) a{
+#banner .banner-data-box .banner-data-top a{
     display: block;
     width: 123px;
     height: 40px;
@@ -68,12 +69,185 @@
     float: left;
     text-align: center;
 }
-#banner .banner-data-box div:nth-of-type(1) a:nth-child(1){
+#banner .banner-data-box .banner-data-top a:nth-child(1){
     margin-left: 53px;
     margin-right: 5px;
     background: #f3f3f3;
 }
-#banner .banner-data-box div:nth-of-type(1) a:nth-child(2){
+#banner .banner-data-box .banner-data-top a:nth-child(2){
     background: #333;
     color: white;
+}
+#banner .banner-data-box .banner-data-main{
+    padding-top: 30px;
+    margin: 0 15px;
+}
+/* 共用样式 */
+.plwdh{
+    padding-left: 8px;
+    width: auto;
+    position: relative;
+}
+.righttips{
+    margin-top: 0;
+    position: absolute;
+    right: -9px;
+    top: 10px;
+    background: url(./../img/f_2.png) no-repeat;
+    padding-left: 25px;
+    width: 30px;
+    height: 20px;
+    background-position: -314px 0;
+}
+.dd{
+    background: url(./../img/f_2.png) no-repeat;
+    background-position: -314px 0;
+    padding-left: 25px;
+    margin-top: 4px;
+    line-height: 18px;
+}
+.pp{
+    background: url(./../img/f_1.png) no-repeat;
+    background-position: -180px -95px;
+    padding-left: 25px;
+    margin-top: 4px;
+    line-height: 18px;
+}
+.pddl{
+    padding-left: 10px;
+}
+.dtt{
+    width: 100%;
+    height: 28px;
+    overflow: hidden;
+}
+.border{
+    box-sizing: border-box;
+    border: 1px solid #e3e2e2;
+}
+.pwdlow{
+    background: #e60011 !important;
+    color: #fff !important;
+}
+.frame{
+    float: right;
+    border: 0;
+    outline: none;
+    font-size: 12px;
+    height: 36px;
+}
+.heigth{
+    height: 38px;
+    line-height: 38px;
+}
+.frame-style{
+    border: 1px solid rgb(51, 51, 51);
+}
+/* 结束 */
+#banner .banner-data-box .banner-data-main .banner-data-main-one>dd{
+    width: 313px;
+    padding-left: 10px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-one>dd>.txt{
+    width: 235px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-two>dd>div:nth-child(1){
+    width: 200px;
+    float: left;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-two>dd>div:nth-child(1) .dxd{
+    width: 128px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-two>dd>div:nth-child(2){
+    height: 40px;
+    width: 110px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    float: right;
+    margin-right: 17px;
+    font-size: 13px;
+    cursor: pointer;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-three>dd>div{
+    width: 235px;
+    height: 38px;
+    line-height: 38px;
+    float: left;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-three>dd>div>.yxy{
+    width: 155px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-three>dd>span{
+    width: 73px;
+    text-align: center;
+    background: #323232;
+    color: #fff;
+    float: right;
+    margin-right: 17px;
+    cursor: pointer;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-four>.pwd-extent{
+    position: absolute;
+    top: 38px;
+    right: 17px;
+    width: 141px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: none;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-four .pwd-extent em{
+    width: 46px;
+    display: inline-block;
+    margin-right: 1px;
+    color: #c5c4c4;
+    background: #efefef;
+    float: left;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-four>div{
+    width: 313px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-four>div>.jxj{
+    width: 235px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-five>div{
+    width: 313px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-five>div>.exe{
+    width: 235px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-seven{
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+    margin-bottom: 5px;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-seven .ceko{
+    vertical-align: middle;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-seven>a{
+    color: #666;
+}
+#banner .banner-data-box .banner-data-main .banner-data-main-eight>.sub{
+    width: 312px;
+    height: 40px;
+    line-height: 40px;
+    background: #000;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+#footer p{
+    line-height: 20px;
+    text-align: center;
+    FONT-FAMILY: Arial,Verdana;
+    color: #666;
+    padding-top: 20px;
+}
+#footer p>a{
+    color: #aaa;
+    padding: 0 20px;
 }

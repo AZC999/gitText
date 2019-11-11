@@ -1,0 +1,128 @@
+.bgd{
+    background: url(./../img/f_1.png);
+}
+#register{
+    height: 69px;
+    width: 100%;
+}
+#register .register-box{
+    width: 990px;
+    height: 69px;
+    line-height: 69px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#register .register-box .logo{
+    display: block;
+    width: 151px;
+    height: 32px;
+    background: url(./../img/f_logo.png) no-repeat;
+    margin-right: 30px;
+    margin-top: 18px;
+    float: left;
+}
+#register .register-box i{
+    display: block;
+    width: 1px;
+    height: 42px;
+    background: #e6e6e6;
+    float: left;
+    margin-top: 13px;
+}
+#register .register-box p{
+    font-size: 18px;
+    color: #666;
+    float: left;
+    margin-left: 30px;
+}
+
+#banner{
+    width: 100%;
+    height: 553px;
+    position: relative;
+}
+#banner .banner-box{
+    display: block;
+    width: 100%;
+    height: 553px;
+    background: url(./../img/f_1.jpg) no-repeat top center;
+}
+#banner .banner-data{
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    margin-left: 115px;
+}
+#banner .banner-data-box{
+    width: 378px;
+    height: 450px;
+    background: white;
+    overflow: hidden;
+}
+#banner .banner-data-box .banner-data-box-one{
+    border-bottom: 1px solid #f3f3f3;
+    margin: 24px 15px 0 15px;
+    text-align: center;
+}
+#banner .banner-data-box .banner-data-box-one>a{
+    display: block;
+    width: 174px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+.style{
+    background: #333;
+    color: #fff;
+}
+#banner .banner-data-box .banner-data-box-two{
+    padding-top: 30px;
+    padding-left: 10px;
+    margin: 0 15px;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl{
+    padding: 0 0 0 8px;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>dd{
+    width: 100%;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>dd>div{
+    width: 313px;
+    height: 38px;
+    box-sizing: border-box;
+    border: 1px solid #e3e2e2;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>dd>div>input{
+    width: 235px;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    float: right;
+    outline: none;
+    font-size: 12px;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>dd>div>i{
+    display: block;
+    width: 48px;
+    height: 36px;
+    float: left;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl:nth-child(1)>dd>div>i{
+    background-position: -168px -27px;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl:nth-child(2)>dd>div>i{
+    background-position: -168px -61px;
+}
+
+
+#footer p{
+    line-height: 20px;
+    text-align: center;
+    font-family: Arial,Verdana;
+    color: #666;
+    padding-top: 20px;
+}
+#footer p>a{
+    color: #aaa;
+    padding: 0 20px;
+}
