@@ -28,6 +28,22 @@ margin:  0 auto;
 .a_title p{text-align: center;
 color: #333;
 font-size: 14px;}
+.a_title2{
+	width: 256px;
+	height: 230px;
+}
+.a_title2 h1{
+	font-size: 40px;
+	color: #000000;
+	font-weight: bold;
+	margin: 0 auto;
+	line-height: 100px;
+	margin-top: 55px;
+	text-align: center;
+}
+.a_title2 p{text-align: center;
+color: #333;
+font-size: 14px;}
 /* 轮播图 */
 .a_pic{
 	height: 500px;
@@ -50,7 +66,7 @@ font-size: 14px;}
 .a_swiperBox ul{float: left;
 width:1184px;
 height: 500px;
-padding: 50px;}
+padding: 30px;}
 .a_swiperBox ul li img{width: 100%;
 height: 100%;}
 .a_swiperBox  h1{margin: 0 auto;
@@ -67,6 +83,7 @@ color: #gray;}
 line-height: 35px;
 font-size: 18px;
 color: red;}
+.a_swiperBox ul{width: 1150px;}
 .a_swiperBox ul li a{display: inline-block;
 width: 240px;
 height: 240px;}
@@ -95,25 +112,30 @@ margin-top: 250px;}
 color: #333;
 font-size: 14px;}
 .a_pho{
+	width: 1150px;
 	height: 550px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 	box-sizing: border-box;
+	
 }
 .a_pho a{
 	display: inline-block;
 	width: 312px;
 	height: 403px;
-	margin-left: 16px;
 	margin-top: 80px;
 }
 .a_pho img{
 	width: 312px;
 	height: 403px;
 }
+.a_pho img:hover{opacity: 0.5;
+background-color: #000000;}
 .a_vio{display: flex;
-justify-content: space-around;}
+justify-content: space-around;
+padding: 5px;
+box-sizing: border-box;}
 .a_downpic{
 	display: flex;
 	justify-content: space-around;

@@ -8,353 +8,13 @@
     <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css"/>
     <link rel="stylesheet" href="../css/a_goods.css">
 	<link rel="stylesheet" href="../css/a_shouye.css">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/showImg.js"></script>
-    <script src="../js/cookie.js"></script>
+   
 </head>
 
 <body>
     <!--公共头部-->
-    <div id="header-vue">
-        <div id="header-vue-left">				
-            <div>
-                <a href="#">关注</a>
-                <a href="#">下载APP</a>
-            </div>
-            <ul>	
-                <li>				 	
-                    <img src="../img/first (29).jpg"><br />
-                    <span>关注公众号</span>				 	
-                </li>
-                <li>				 	
-                    <img src="../img/first (24).jpg"><br />
-                    <span>优购APP下载</span>				 	
-                </li>
-            </ul>		
-        </div>	
-				<!-- 登录 -->
-        <div id="header-vue-right">
-            <ol>
-                <li class="showName">
-                    <a rel="nofollow" href="../../hezhen/login/login.html">登录</a> /
-                    <a rel="nofollow" href="../../zhanwen/register.html">注册</a>
-                </li>
-                <li>
-                    <a href="#"  class="top-collect">
-                        <i style="font-size: 12px;" class="iconfont">&#xe662;&nbsp;收藏</i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i style="font-size: 12px;" class="iconfont">&#xe605;&nbsp;购物袋</i>
-                    </a>
-                </li>
-                <li id="notice">
-                    <div>
-                        <a href="#">公告</a>
-                    </div>
-                    <ul id="notice-hd">						            
-                        <li>
-                            <a target="_blank" href="#" style="color: #000000;">优购客服电话变更</a>
-                        </li>						            
-                        <li>
-                            <a target="_blank" href="#" style="color: #000000;">关闭分享购频道</a>
-                        </li>						            
-                        <li>
-                            <a target="_blank" href="#" style="color: #000000;">提醒会员谨防诈骗电话</a>
-                        </li>						            
-                    </ul>	
-                </li>
-            </ol>				
-                        
-        </div>
-    </div>
-	<div class="logo a_container">
-		<a href="" title="优购"><img src="../img/logo.png"></a>
-	</div>
-    <!--导航-->
-    <div id="container">
-        <div id="nav">
-            <div id="nav-top">
-                <a id="zhaopian">
-                    <img src=""/>
-                </a>				
-            </div>
-            <div id="nav-buttom">
-                <div id="nav-all">
-                    <ul class="nav-head">
-                        <li><a href="#">首页</a></li>
-                        <li class="on"><a href="#">女鞋</a></li>
-                        <li class="on"><a href="#">男鞋</a></li>
-                        <li class="on"><a href="#">运动</a></li>
-                        <li class="on"><a href="#">户外</a></li>
-                        <li class="on"><a href="#">儿童</a></li>
-                        <li class="on"><a href="#">箱包</a></li>
-                    </ul>
-                    <ul class="search">
-                        <li>
-                            <input type="text" class="keyword"/>
-                            <a href="#"><img src="../img/p_05.jpg" class="btn-search"/></a>	
-                        </li>
-                    </ul>
-                </div>
-                <div clsaa="nav-div">										
-                    <div class="nav-down">
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">品牌</a></h2>          
-                            <li style="float: left;">
-                                <span><a href="#">百丽</a></span>
-                                <span><a href="#">天美意</a></span>
-                                <span><a href="#">森达</a></span>
-                                <span><a href="#">妙丽</a></span>
-                                <span><a href="#">暇步士</a></span>
-                                <span><a href="#">BEFFON</a></span>
-                            </li>
-                            <li style="float: left;">
-                                <span><a href="#">他她</a></span>
-                                <span><a href="#">思加图</a></span>
-                                <span><a href="#">真美诗</a></span>
-                                <span><a href="#">拔佳</a></span>
-                                <span><a href="#">百思图</a></span>
-                                <span><a href="#">圣伽步</a></span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">热销推荐</a></h2>
-                            <li><a href="#">2019新款冬靴</a></li>
-                            <li><a href="#">2019新款单鞋</a></li>
-                            <li><a href="#">专柜同款</a></li>
-                            <li><a href="#">人气TOP</a></li>
-                            <li><a href="#">老爹鞋</a></li>
-                            <li><a href="#">小白鞋</a></li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">女士靴子</a></h2>
-                            <li><a href="#">短靴</a></li>
-                            <li><a href="#">中靴</a></li>     
-                            <li><a href="#">长靴</a></li>
-                            <li><a href="#">绒里靴</a></li>
-                            <li><a href="#">马丁靴</a></li>
-                            <li><a href="#">雪地靴</a></li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">女士单鞋</a></h2>
-                            <li style="float: left;">
-                                <span><a href="#">浅口鞋</a></span>
-                                <span><a href="#">尖头鞋</a></span>
-                                <span><a href="#">玛丽珍 </a></span>
-                                <span><a href="#">休闲鞋</a></span>
-                                <span><a href="#">高跟鞋</a></span>
-                                <span><a href="#">细跟鞋</a></span>
-                            </li>
-                            <li style="float: left;">
-                                <span><a href="#">满帮鞋</a></span>
-                                <span><a href="#">乐福鞋 </a></span>
-                                <span><a href="#">英伦风</a></span>
-                                <span><a href="#">运动鞋 </a></span>
-                                <span><a href="#">平底鞋 </a></span>
-                                <span><a href="#">粗跟鞋</a></span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">女士凉鞋</a></h2>
-                            <li><a href="#">2019新款</a></li>
-                            <li><a href="#">穆勒凉鞋</a></li>
-                            <li><a href="#">中空凉鞋</a></li>
-                            <li><a href="#">后空凉鞋</a></li>
-                            <li><a href="#">纯凉鞋</a></li>
-                            <li><a href="#">凉拖</a></li>
-                        </ul>						
-                    </div>
-                    <div class="nav-down">
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">品牌</a></h2>          
-                            <li style="float: left;">
-                                <span><a href="#">百丽</a></span>
-                                <span><a href="#">森达 </a></span>
-                                <span><a href="#">暇步士</a></span>
-                                <span><a href="#">拔佳</a></span>
-                                <span><a href="#">天美意 </a></span>
-                            </li>
-                            <li style="float: left;">
-                                <span><a href="#">他她</a></span>
-                                <span><a href="#">思加图</a></span>
-                                <span><a href="#">拔佳</a></span>
-                                <span><a href="#">圣伽步</a></span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">热销推荐</a></h2>
-                            <li><a href="#">2019新款</a></li>
-                            <li><a href="#">专柜同款</a></li>
-                            <li><a href="#">热销TOP</a></li>
-                            <li><a href="#">小白鞋</a></li>
-                            <li><a href="#">老爹鞋</a></li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">精选分类</a></h2>
-                            <li style="float: left;">
-                                <span><a href="#">正装鞋</a></span>
-                                <span><a href="#">休闲鞋</a></span>
-                                <span><a href="#">系带鞋</a></span>
-                                <span><a href="#">懒人鞋</a></span>
-                                <span><a href="#">乐福鞋 </a></span>
-                                <span><a href="#">豆豆鞋</a></span>
-                            </li>
-                            <li style="float: left;">
-                                <span><a href="#">德比鞋 </a></span>
-                                <span><a href="#">布洛克鞋 </a></span>
-                                <span><a href="#">满帮鞋</a></span>
-                                <span><a href="#">纯凉鞋 </a></span>
-                                <span><a href="#">冬靴 </a></span>
-
-                    </div>
-                    <div class="nav-down">
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">品牌</a></h2>          
-                            <li style="float: left;">
-                                <span><a href="#">阿迪达斯 </a></span>
-                                <span><a href="#"> 耐克 </a></span>
-                                <span><a href="#">三叶草</a></span>
-                                <span><a href="#">阿迪休闲</a></span>
-                                <span><a href="#">彪马</a></span>
-                            </li>
-                            <li style="float: left;">
-                                <span><a href="#">匡威 </a></span>
-                                <span><a href="#">鬼冢虎</a></span>
-                                <span><a href="#">亚瑟士</a></span>
-                                <span><a href="#">锐步</a></span>
-                                <span><a href="#">万斯</a></span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">运动鞋</a></h2>          
-                            <li style="float: left;">
-                                <span><a href="#">跑步鞋</a></span>
-                                <span><a href="#">休闲鞋 </a></span>
-                                <span><a href="#">复刻鞋</a></span>
-                                <span><a href="#">篮球鞋</a></span>
-                                <span><a href="#">户外鞋</a></span>
-                                <span><a href="#">帆布鞋 </a></span>
-                            </li>
-                            <li style="float: left;">
-                                <span><a href="#">网球鞋 </a></span>
-                                <span><a href="#">综训鞋</a></span>
-                                <span><a href="#">健步鞋</a></span>
-                                <span><a href="#">足球鞋</a></span>
-                                <span><a href="#">凉鞋/拖鞋</a></span>
-                                <span><a href="#">包配</a></span>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">运动服</a></h2>
-                            <li><a href="#">夹克</a></li>
-                            <li><a href="#">卫衣/套头衫</a></li>
-                            <li><a href="#">长裤</a></li>
-                            <li><a href="#">T恤</a></li>
-                            <li><a href="#">POLO衫</a></li>
-                            <li><a href="#">短裤</a></li>
-                            <li><a href="#">紧身服/胸衣</a></li>
-                        </ul>    
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">关键词</a></h2>
-                            <li><a href="#">专柜同款</a></li>
-                            <li><a href="#">夏季新品</a></li>     
-                            <li><a href="#">贝壳头鞋</a></li>
-                            <li><a href="#">SALE</a></li>
-                        </ul>
-                    </div>	
-                    <div class="nav-down">
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">品牌</a></h2>
-                            <li><a href="#">CAT</a></li>
-                            <li><a href="#">添柏岚</a></li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">户外鞋</a></h2>
-                            <li><a href="#">工装靴</a></li>
-                            <li><a href="#">休闲鞋</a></li>     
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">户外服</a></h2>
-                            <li><a href="#">T恤</a></li>
-                            <li><a href="#">休闲裤</a></li>
-                            <li><a href="#">羽绒服</a></li>
-                        </ul>						
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">关键词</a></h2>
-                            <li><a href="#">速干</a></li>
-                            <li><a href="#">大黄靴</a></li>
-                            <li><a href="#">热销TOP</a></li>
-                        </ul>						
-                    </div>
-                    <div class="nav-down">
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">热门品牌</a></h2>
-                            <li><a href="#">阿迪</a></li>
-                            <li><a href="#">耐克</a></li>
-                            <li><a href="#">三叶草</a></li>
-                            <li><a href="#">鬼冢虎</a></li>
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">童鞋</a></h2>
-                            <li><a href="#">复刻鞋</a></li>
-                            <li><a href="#">休闲鞋</a></li>     
-                            <li><a href="#">篮球鞋</a></li>
-                            <li><a href="#">跑步鞋</a></li>
-                            <li><a href="#">训练鞋</a></li>						
-                        </ul>
-                        <ul>
-                            <h2 style="margin: 20px 0;"><a href="#">童装</a></h2>
-                            <li><a href="#">儿童套装</a></li>
-                            <li><a href="#">外套/风衣</a></li>
-                            <li><a href="#">中空凉鞋</a></li>
-                            <li><a href="#">卫衣</a></li>
-                            <li><a href="#">棉服/羽绒服</a></li>
-                            <li><a href="#">裙装</a></li>
-                            <li><a href="#">T恤</a></li>
-                        </ul>						
-                    </div>
-                    <div class="nav-down">
-                    <ul>
-                        <h2 style="margin: 20px 0;"><a href="#">品牌</a></h2>          
-                        <li style="float: left;">
-                            <span><a href="#">百丽箱包</a></span>
-                            <span><a href="#">百思图</a></span>
-                            <span><a href="#">天美意</a></span>
-                            <span><a href="#">他她</a></span>
-                            <span><a href="#">思加图</a></span>							
-                        </li>
-                        <li style="float: left;">
-                            <span><a href="#">拔佳</a></span>
-                            <span><a href="#">真美诗</a></span>
-                            <span><a href="#">妙丽</a></span>
-                            <span><a href="#"> 圣伽步</a></span>
-                        </li>
-                    </ul>     
-                    <ul>
-                        <h2 style="margin: 20px 0;"><a href="#">热销推荐</a></h2>
-                        <li><a href="#">2019新款</a></li>
-                        <li><a href="#">人气TOP</a></li>
-                    </ul>
-                    <ul>
-                        <h2 style="margin: 20px 0;"><a href="#">魅力女包</a></h2>
-                        <li><a href="#">手提/手包</a></li>
-                        <li><a href="#">单肩/斜挎</a></li>     
-                        <li><a href="#">双肩包</a></li>				
-                    </ul>
-                    
-                    <ul>
-                        <h2 style="margin: 20px 0;"><a href="#">经典男包</a></h2>
-                        <li><a href="#">单肩/斜挎</a></li>
-                        <li><a href="#">手提/手包</a></li>
-                        <li><a href="#">双肩包</a></li>				
-                    </ul>						
-                </div>
-                </div>
-            </div>
-        </div>	
-    </div>
+	<div class="head"></div>
+   
 	<div class="a_banner a_container">
 		<a href=""><img src="../img/banner.jpg"></a>      
 	</div>
@@ -442,135 +102,63 @@
 			<a href=""><img src="../img/pic9.jpg" alt=""></a>
 			
 		</div>
+		<div class="a_title2 a_container">
+			<h1>品牌潮流资讯</h1>
+			<p>BRAND FASHION</p>
+		</div>
 		<!-- 视频 -->
 		<div class="a_vio a_container">
-			<a href=""><video src="../img/video1.mp4" controls="controls" height="459" width="317"></video></a>
-			<a href=""><video src="../img/video2.mp4" controls="controls" height="459" width="317"></video></a>
+			<a href=""><video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/bai_li_(2).jpg" style="background-color:#000;" controlslist="nodownload" onclick="playPause(this)" width="315" height="458" controls="controls">
+	              <source src="../img/video2.mp4">
+	          
+				</video></a>
+			<a href=""><video class="video" poster="//i1.ygimg.cn/pics/shop/seoul/lsl/si_jia_tu_(2).jpg" style="background-color:#000;" controlslist="nodownload" onclick="playPause(this)" width="315" height="458" controls="controls">
+              <source src="../img/video1.mp4">
+          </video></a>
 			<a href=""><img src="../img/pic12.jpg" alt=""></a>
 		</div>
 		<!-- 底部图片 -->
-		<div class="a_downpic a_container">
+		<!-- <div class="a_downpic a_container">
 			<a href=""><img src="../img/pic13.jpg" alt=""></a>
 			<a href=""><img src="../img/pic14.jpg" alt=""></a>
 			<a href=""><img src="../img/pic15.jpg" alt=""></a>
 			<a href=""><img src="../img/pic16.jpg" alt=""></a>
-		</div>
+		</div> -->
+		
 		<!-- 佟丽娅代言视频 -->
 		<div class="a_downvideo a_container">
-			<a href=""><video src="../img/video3.mp4" controls="controls" width="872" height="490" poster="img/pic01.jpg"></video></a>
+			<video class="video" poster="//i1.ygimg.cn/pics/shop/zt/yn/pin_pai_shi_pin_.jpg" style="background-color:#000;text-align: center;" controlslist="nodownload" onclick="playPause(this)" width="1150" height="444" controls="controls" >
+			<source src="../img/video3.mp4">
+			</video>
 		</div>
-		<div class="a_lastpic a_container">
+		<!-- <div class="a_lastpic a_container">
 			<a href=""><img src="../img/pic27.jpg" alt=""></a>
+		</div> -->
+		<div id="clothesBox">
+		    <div class="topic">
+		        <h3>时尚女鞋</h3>
+		    </div>
+		    <ul class="girl">
+		    </ul>
+		    <div class="topic">
+		        <h3>品质男鞋</h3>
+		    </div>
+		    <ul class="boy">
+		    </ul>
+		    <div class="topic">
+		        <h3>潮流运动</h3>
+		    </div>
+		    <ul class="exercise">
+		    </ul>
 		</div>
 		<!-- 底部 -->
-		<div id="footer">
-		    <div id="footer-top">
-		        <div id="footer-container">
-		            <ul >
-		                <li>
-		                    <a href="#"><i style="font-size: 27px;" class="iconfont">&#xe665;</i>&nbsp;正品保证</a>
-		                </li>
-		                <li>
-		                    <a href="#"><i style="font-size: 27px;" class="iconfont">&#xe601;</i>&nbsp;10天退换货</a>
-		                </li>
-		                <li>
-		                    <a href="#"><i style="font-size: 27px;" class="iconfont">&#xe65a;</i>&nbsp;10天调补差价额</a>
-		                </li>
-		                <li>
-		                    <a href="#"><i style="font-size: 27px;" class="iconfont">&#xe641;</i>&nbsp;09:00—21:00在线客服</a>
-		                </li>
-		            </ul>
-		        </div>
-		    </div>
-		    <div id="footer-bottom">
-		        <div id="container">
-		            <div class="content">
-		                    <ul>
-		                        <li><a href="#">新手帮助</a></li>
-		                        <li><a href="#">交易条款协议</a></li>
-		                        <li><a href="#">注册新用户</a></li>
-		                        <li><a href="#">会员积分详情</a></li>
-		                    </ul>
-		                    <ul>
-		                        <li><a href="#">购物指南</a></li>
-		                        <li><a href="#">订购流程</a></li>
-		                        <li><a href="#">验货与签收</a></li>
-		                        <li><a href="#">订单配送</a></li>
-		                    </ul>
-		                    <ul>
-		                        <li><a href="#">支付/配送</a></li>
-		                        <li><a href="#">支付方式</a></li>
-		                        <li><a href="#">配送方式</a></li>
-		                        <li><a href="#">配送时间及运费</a></li>
-		                    </ul>
-		                    <ul>
-		                        <li><a href="#">售后服务</a></li>
-		                        <li><a href="#">退换货政策</a></li>
-		                        <li><a href="#">退款说明</a></li>
-		                        <li><a href="#">发票制度</a></li>
-		                    </ul>
-		                    <ul>
-		                        <li><a href="#">会员服务</a></li>
-		                        <li><a href="#">找回密码</a></li>
-		                        <li><a href="#">联系我们</a></li>
-		                    </ul>
-		                    <ul>
-		                        <li><a href="#">优购客服</a></li>
-		                        <li><a href="#"><i class="iconfont">&#xe600;</i>&nbsp;在线咨询</a></li>
-		                        <li><a href="#">ygservice@belle.com.cn</a></li>
-		                        <li><a href="#">微信客服：优购时尚商城</a></li>
-		                    </ul>
-		                </div>
-		            <div class="certification">
-		                <ul>
-		                    <li><img style="height: 40px;" src="../img/first (35).jpg"/></li>
-		                    <li><img src="../img/first (26).jpg"/></li>
-		                    <li><img src="../img/first (1).png"/></li>
-		                    <li><img src="../img/first (2).png"/></li>
-		                </ul>
-		                <ol>
-		                    <li>
-		                        <img style="width: 120px;height: 120px;" src="../img/first (24).jpg"/>
-		                        <p>扫描下载手机客户端</p>
-		                    </li>
-		                    <li>
-		                        <img src="../img/first (29).jpg"/>
-		                        <p>关注公众号</p>
-		                    </li>						
-		                </ol>							
-		            </div>	
-		            <div id="friendly">
-		                <ul>
-		                    <li><a href="#">关于优购</a></li>
-		                    <li><a href="#">集团采购</a></li>
-		                    <li><a href="#">招贤纳士</a></li>
-		                    <li><a href="#">手机优购</a></li>
-		                    <li><a href="#">联系我们</a></li>
-		                    <li><a href="#">友情链接</a></li>
-		                </ul>
-		                
-		            </div>
-		            <div class="copyright">
-		                <p>
-		                Copyright © 2011-2016 Yougou Technology Co., Ltd.
-		                <a href="#">粤ICP备09070608号-4</a>
-		                        增值电信业务经营许可证：
-		                <a href="#">粤B2-20190636
-		                </a>&nbsp;
-		                <span>深公网安备：4403101910665 </span>
-		                <a target="_blank" href="#">
-		                    <span>粤公网安备 44030502000017号</span>
-		                </a>
-		                </p>
-		            </div>
-		        </div>
-		    </div>
-		</div>
+		<div class="foot"></div>
+		
 		<div id="a_box">
 		  <a href="">返回顶部</a>
 		</div>
 	</body>
-	<script>
+	<!-- <script>
 	  var oUl = document.querySelectorAll('ul');
 	  var oLis = document.querySelectorAll('li');
 	
@@ -614,8 +202,8 @@
 	    }, 1000);
 	  }
 	  
-	</script>
-	<script type="text/javascript">
+	</script> -->
+	<!-- <script type="text/javascript">
 		var oBox = document.getElementById('#a_box');
 		var timer;
 		
@@ -638,5 +226,24 @@
 		    document.body.scrollTop = scrollTop;
 		  }, 30);
 		}
+	</script> -->
+	<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+	
+	
+	<script type="text/javascript">
+	    $("#div").hover(function () {
+	        $("#mengban").show()
+	    },function () {
+	        $("#mengban").hide()
+	    });
 	</script>
+	<script type="text/javascript">
+		$('.head').load('head.html');
+	</script>
+	<script type="text/javascript">
+		$('.foot').load('foot.html');
+	</script>
+	<script src="../js/showImg.js"></script>
+	<script src="../js/cookie.js"></script>
+	
 	</html>

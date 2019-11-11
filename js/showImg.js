@@ -1,4 +1,5 @@
-$(function(){
+
+$('#head').load("head.html", function () {
     // var date=new Date();
     // date.setDate(date.getDate()+10);
     // setCookie("uname","tom",date,"/");
@@ -7,40 +8,42 @@ $(function(){
     //     $(".showName").html("你好,"+name+"<a class='signOut'>[退出]</a>");
     // }
     // $(".signOut").click(function(){
-    //     $(".showName").html("<a rel='nofollow' href='../../hezhen/login/login.html'>登录</a>" 
+    //     $(".showName").html("<a rel='nofollow' href='../../hezhen/login/login.html'>登录</a>"
     //     +"/"+"<a rel='naofollow' href='../../zhanwen/register.html'>注册</a>")
     // })
-     //头left的隐藏
-     $("#header-vue-left div a").hover(function(){
-         $(this).addClass("active").siblings().removeClass("active");
-         $("#header-vue-left ul li").eq($(this).index()).show().siblings().hide();
-     },function(){
-         $("#header-vue-left ul li").hide();
-     });
+    //  头left的隐藏
+    $("#header-vue-left div a").hover(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#header-vue-left ul li").eq($(this).index()).show().siblings().hide();
+    }, function () {
+        $("#header-vue-left ul li").hide();
+    });
+    console.log($("#header-vue-left div a"))
 
 
-     //头right的隐藏
-     $("#notice").hover(function(){
-         $(this).find("#notice-hd").show();
-     },function(){
-         $("#notice-hd").hide();
-     });
+    //  头right的隐藏
+    $("#notice").hover(function () {
+        $(this).find("#notice-hd").show();
+    }, function () {
+        $("#notice-hd").hide();
+    });
 
-     //导航选项卡
-     $(".on").on({
-         mouseenter:function(){
-             $(this).siblings();
-             $(".nav-down").eq($(this).index()-1).slideDown().siblings().hide();
-         },
-         mouseleave:function(){
-             $(this).siblings();
-             $(".nav-down").eq($(this).index()-1).slideUp().siblings().hide();
-         } 
-     });
+    //导航选项卡
+    $(".on").on({
+        mouseenter: function () {
+            $(this).siblings();
+            $(".nav-down").eq($(this).index() - 1).slideDown().siblings().hide();
+        },
+        mouseleave: function () {
+            $(this).siblings();
+            $(".nav-down").eq($(this).index() - 1).slideUp().siblings().hide();
+        }
+    });
+    console.log($(".on"))
      var girlStr="";
      var clothesStr="";
      var pixieStr="";
-    $.getJSON("goods.json",function(res){
+    $.getJSON("../JSON/goods.json",function(res){
          $(res[0]).each(function(index,ele){
              girlStr+=`
              <li>
@@ -96,4 +99,5 @@ $(function(){
          $(".boy").html(pixieStr);
          $(".exercise").html(clothesStr);
      })
- })
+})
+

@@ -71,14 +71,14 @@ text-decoration: none;}
 }
 /* logo区 */
 .a_container{
-	width: 1105px;
+	width: 1150px;
 	margin: 0 auto;
 }
 .logo{
 	height:231px;
 	background-color: #fff;
 	margin: 0 auto;
-	padding-top: 100px;
+	
 	box-sizing: border-box;
 }
 .logo img{width: 98px;
@@ -110,19 +110,19 @@ margin-top: 60px;}
 }
 #container{
 	width: 1190px;
+	height: 58px;
 	margin: 0 auto;
 	/*overflow: hidden;*/
 }
 #nav{
-	height: 220px;
+	height: 58px;
 }
-#nav-top{
-	height: 170px;
-	line-height: 170px;
+/* #nav-top{
+	height: 70px;
+	line-height: 70px;
 	padding: 20px;
 	box-sizing: border-box;
-}
-box-sizing: border-box;}
+    box-sizing: border-box;} */
 #zhaopian{
 	height: 58px;
 	width:98px;
@@ -131,9 +131,8 @@ box-sizing: border-box;}
 }
 #nav-buttom{
 	height: 50px;
-	border-bottom: 1px solid #CEE1EE;
-	position: relative;
-	width: 1180px;
+	/* border-bottom: 1px solid #CEE1EE; */
+	
 }
 #nav-all{
 	overflow: hidden;
@@ -178,7 +177,7 @@ box-sizing: border-box;}
 .nav-down ul{
 	float: left;
 	width: 20%;
-	padding-left: 30px;
+	padding-left: 20px;
 	box-sizing: border-box;
 }
 .nav-down a{
@@ -199,6 +198,20 @@ box-sizing: border-box;}
     width: 100%;
     height: 1054px;
 }
+/* 视频 */
+.a_downvideo{width: 1025px;
+height: 444px;
+margin-top: 30px;
+margin-bottom: 30px;
+display: flex;
+justify-content: space-around;}
+.a_downvideo video{margin: 0 auto;
+object-fit:fill;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+/* .a_pho a:hover{
+width:} */
 #clothesBox{
     width: 1190px;
     margin: 0 auto;
