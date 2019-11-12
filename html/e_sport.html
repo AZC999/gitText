@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 <link rel="stylesheet" href="../css/e_sport.css">
 <link rel="stylesheet" href="../css/a_goods.css">
 <link rel="stylesheet" href="../css/a_footer.css">
+
 <body>
   <div id="head"></div>
   <!-- 中间部分 -->
@@ -35,39 +37,16 @@
         </p>
         <form method="get">
           <ul class="filter-list-wrap">
-            <li>
+            <!-- <li>
               <p><i></i>品牌</p>
               <div>
-
+                <ul>
+                  <li>
+                    <label for="" title="耐克">耐克</label>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li>
-              <p><i></i>品类</p>
-            </li>
-            <li>
-              <p><i></i>性别</p>
-            </li>
-            <li>
-              <p><i></i>价格</p>
-            </li>
-            <li>
-              <p><i></i>尺码</p>
-            </li>
-            <li>
-              <p><i></i>颜色</p>
-            </li>
-            <li>
-              <p><i></i>运动款式</p>
-            </li>
-            <li>
-              <p><i></i>鞋类流行款式</p>
-            </li>
-            <li>
-              <p><i></i>款式季节</p>
-            </li>
-            <li>
-              <p><i></i>面料材质</p>
-            </li>
+            </li> -->
           </ul>
         </form>
       </div>
@@ -140,6 +119,47 @@
 <!-- 头 -->
 <script src="../js/cookie.js"></script>
 <script src="../js/showImg.js"></script>
+<!-- 中间左侧的部分 -->
+<script>
+  $(function () {
+    $.ajax({
+      url: '../JSON/e_leftbrand.json',
+      type: 'get',
+      dataType: 'json',
+      cache: false,
+      success: function (json) {
+        var results = ''
+        $.each(json, function (index, item) {
+          results += `<li class="checkbox">
+              <p><i></i>${item.listName}</p>
+              <div>
+                <ul>
+                </ul>
+              </div>
+            </li>`
+        })
+        $('.filter-list-wrap').html(results)
+        for (var i in json) {
+          delete json[i].listName;
+          for (var j in json[i]) {
+            json[i][j]
+            var results1 = ''
+            $.each(json[i][j], function (index, item) {
+              results1 += `<li>
+                    <label for="" title="${item}">${item}</label>
+                  </li>`
+            })
+            $('.filter-list-wrap>li>div>ul').eq(i).append(results1)
+          }
+        }
+      }
+    })
+  })
+  //点击显示和隐藏
+  $('.filter-list-wrap').on('click',function () {
+    $('.filter-list-wrap>li>div>ul').toggle()
+  })
+</script>
 <!-- 中间部分 -->
 <script>
   var jsons = 0
@@ -154,6 +174,7 @@
         for (var n = 0; n < 20; n++) {
           every(jsons[n])
         }
+        $(".filter-sub-navlist>p>.res").html(jsons.length)
       }
     })
   })
