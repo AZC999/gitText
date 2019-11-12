@@ -215,7 +215,7 @@ $(function(){
             flag_4 = false;
         }
 
-        if(pwdVal.length >= 25){
+        if(pwdVal.length >= 25){//长度不大于25
             this.value = pwdVal.substr(0,25);
         }
         
@@ -263,7 +263,7 @@ $(function(){
                 cache: 'false',
                 data: {'uphone': $('.txt').val(),'upwd': $('.jxj').val()},
                 success: function(data){
-                    alert('注册成功');
+                    location.href = 'login.html'
                 }
             })
         }
