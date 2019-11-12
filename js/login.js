@@ -32,7 +32,7 @@ $(function(){
                 data: {'uphone': $('.txt').val(),'upwd': $('.pwd').val()},
                 success: function(data){
                     if(Number(data)){
-                        location.href = 'a_shouye.html';
+                        location.href = 'a_shouye.html?data=' + $('.txt').val();
                     }else{
                         $('.txt').parent().addClass('frame-style').parent().next().children().addClass('pp').html('您的账号或密码有误');
                         $('.pwd').val('').parent().addClass('frame-style');

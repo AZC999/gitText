@@ -263,7 +263,7 @@ $(function(){
                 cache: 'false',
                 data: {'uphone': $('.txt').val(),'upwd': $('.jxj').val()},
                 success: function(data){
-                    location.href = 'login.html'
+                    location.href = 'login.html';
                 }
             })
         }
