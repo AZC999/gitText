@@ -60,13 +60,13 @@ text-decoration: none;}
 .certification ol{
 	float: left;
 	margin-left: 180px;
-	padding-top: 30px;
+	padding-top: 70px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
 .certification ol li{
 	float: left;
-	margin-left: 40px;
+	margin-left: 80px;
 	text-align: center;
 	color: #ffffff;
 }
@@ -103,7 +103,7 @@ text-decoration: none;}
 	background-color: #333;
 	width: 1150px;
 	margin: 0 auto;
-	padding-left: 20px;
+	padding-right: 90px;
 	box-sizing: border-box;
 }
 .copyright>p{
