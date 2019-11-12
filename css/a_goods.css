@@ -115,12 +115,10 @@ margin-top: 60px;}
 }
 #nav{
 	height: 60px;
+	position: relative;
 }
 #nav-buttom{
 	height: 50px;	
-}
-#nav-all{
-	overflow: hidden;
 }
 .nav-head{
 	width: 930px;
@@ -155,6 +153,7 @@ margin-top: 60px;}
 	position: absolute;
 	width: 1190px;
 	height: 260px;
+	top:58px;
 	display: none;
 	background: #FFFFFF;
 }
@@ -369,6 +368,7 @@ height: auto;
 }
 .a_vio{display: flex;
 justify-content: space-around;}
+.a_vio video{object-fit:fill;}
 .a_vio video:hover{opacity: 0.5;}
 .a_vio img:hover{opacity: 0.5;}
 #a_box {

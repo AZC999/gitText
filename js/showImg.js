@@ -22,23 +22,47 @@ $('#head').load("head.html", function () {
 
 
     //  头right的隐藏
+	
     $("#notice").hover(function () {
         $(this).find("#notice-hd").show();
     }, function () {
         $("#notice-hd").hide();
     });
     //导航选项卡
+
     $(".on").on({
-        mouseenter: function () {
-            $(this).siblings();
+        mouseenter:function () {
+            // $(this).siblings();
             $(".nav-down").eq($(this).index() - 1).slideDown().siblings().hide();
         },
-        mouseleave: function () {
-            $(this).siblings();
-            $(".nav-down").eq($(this).index() - 1).slideUp().siblings().hide();
+        mouseleave:function () {
+            // $(this).siblings();
+            $(".nav-down").eq($(this).index()-1 ).slideUp().siblings().hide();
         }
     });
-    console.log($(".on"))
+	
+	// $(".on").mouseenter((function () {
+	//     // $(this).siblings();
+	//     $(".nav-down").eq($(this).index() - 1).slideDown().siblings().hide();
+	// });
+	// $(".on").mouseleave(function(){
+	//     // $(this).siblings();
+	//     $(".nav-down").eq($(this).index()-1 ).slideUp().hide();
+	// })
+
+	// $(".on").on({
+	// $('.nav-down').slideDown( 1000 , 'swing' , function (){ 
+	// // $(this).siblings();
+ //    $('.nav-down').eq($(this).index() - 1).slideDown().siblings().hide(); } );
+	// $('.nav-down').slideUp({
+	//        duration:1000,
+	//        easing:'easeOutElastic',
+	//        complete:function (){
+	//          // $(this).siblings();
+	//           $(".nav-down").eq($(this).index()-1 ).slideUp().siblings().hide();   
+	//        }
+	// 	});
+	// })
      var girlStr="";
      var clothesStr="";
      var pixieStr="";
