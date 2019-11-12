@@ -67,8 +67,8 @@
   margin-right: 9px;
   margin-top: 3px;
 }
-.filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li.active>div {
-  display: block;
+.filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li>div {
+  display: none;
 }
 .filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li.checkbox>div>ul {
   padding-left: 10px;
