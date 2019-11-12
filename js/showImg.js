@@ -18,7 +18,7 @@ $('#head').load("head.html", function () {
     }, function () {
         $("#header-vue-left ul li").hide();
     });
-    console.log($("#header-vue-left div a"))
+  
 
 
     //  头right的隐藏

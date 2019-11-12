@@ -219,7 +219,7 @@ font-weight: bold;}
 .a_swiperBox  h2{margin-left: 80px;
 line-height: 45px;
 font-size: 16px;
-color: #gray;}
+color: gray;}
 .a_swiperBox span{margin-left: 80px;
 line-height: 35px;
 font-size: 18px;
@@ -293,7 +293,6 @@ margin-bottom: 30px;}
 .a_downvideo video{margin: 0 auto;
 object-fit:fill;
 }
-.a_downvideo video:hover{}
 #content{display: flex;
 justify-content: space-around;
 width: 1150px;
