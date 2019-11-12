@@ -135,7 +135,7 @@ $(function(){
     function yxy(_this){
         $(_this).parent().removeClass('frame-style').parent().next().children().removeClass('pp')
         if($(_this).val()){
-            if(Six_code === $(_this).val()){
+            if(Six_code.toLowerCase() === $(_this).val().toLowerCase()){
                 $(_this).parent().parent().next().children().html('');
                 flag_3 = true;
             }else{
@@ -215,7 +215,7 @@ $(function(){
             flag_4 = false;
         }
 
-        if(pwdVal.length >= 25){
+        if(pwdVal.length >= 25){//长度不大于25
             this.value = pwdVal.substr(0,25);
         }
         
@@ -246,7 +246,6 @@ $(function(){
         } 
     }
     $('.exe').blur(function(){
-        // $(this).parent().addClass('frame-style');
         exe(this);
     })
 
@@ -264,7 +263,7 @@ $(function(){
                 cache: 'false',
                 data: {'uphone': $('.txt').val(),'upwd': $('.jxj').val()},
                 success: function(data){
-                    alert('注册成功');
+                    location.href = 'login.html';
                 }
             })
         }
