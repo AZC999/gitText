@@ -260,15 +260,13 @@ $(function(){
         if(flag_1 && flag_2 && flag_3 && flag_4 && flag_5){
             $.ajax({
                 type: 'get',
-                url: '',
+                url: './../php/register.php',
                 cache: 'false',
-                data: 'uphone=' + $('.txt').val()&'upwd=' + $('.jxj').val(),
+                data: {'uphone': $('.txt').val(),'upwd': $('.jxj').val()},
                 success: function(data){
-
+                    alert('注册成功');
                 }
             })
-        }else{
-            alert('注册失败');
         }
     }
     $('.sub').click(function(){
