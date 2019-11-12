@@ -135,7 +135,7 @@ $(function(){
     function yxy(_this){
         $(_this).parent().removeClass('frame-style').parent().next().children().removeClass('pp')
         if($(_this).val()){
-            if(Six_code === $(_this).val()){
+            if(Six_code.toLowerCase() === $(_this).val().toLowerCase()){
                 $(_this).parent().parent().next().children().html('');
                 flag_3 = true;
             }else{
@@ -246,7 +246,6 @@ $(function(){
         } 
     }
     $('.exe').blur(function(){
-        // $(this).parent().addClass('frame-style');
         exe(this);
     })
 

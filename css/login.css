@@ -71,19 +71,30 @@
     line-height: 40px;
     float: left;
 }
+/* 共用样式 */
 .style{
     background: #333;
     color: #fff;
+}
+.frame-style{
+    border: 1px solid rgb(51, 51, 51);
+}
+.pp{
+    background: url(./../img/f_1.png) no-repeat;
+    background-position: -180px -95px;
+    padding-left: 25px;
+    margin-top: 4px;
+    line-height: 18px;
 }
 #banner .banner-data-box .banner-data-box-two{
     padding-top: 30px;
     padding-left: 10px;
     margin: 0 15px;
 }
-#banner .banner-data-box .banner-data-box-two>form>dl{
+#banner .banner-data-box .banner-data-box-two>form dl{
     padding: 0 0 0 8px;
 }
-#banner .banner-data-box .banner-data-box-two>form>dl>dd{
+#banner .banner-data-box .banner-data-box-two>form dl dd{
     width: 100%;
 }
 #banner .banner-data-box .banner-data-box-two>form>dl>dd>div{
@@ -91,6 +102,7 @@
     height: 38px;
     box-sizing: border-box;
     border: 1px solid #e3e2e2;
+    position: relative;
 }
 #banner .banner-data-box .banner-data-box-two>form>dl>dd>div>input{
     width: 235px;
@@ -113,7 +125,64 @@
 #banner .banner-data-box .banner-data-box-two>form>dl:nth-child(2)>dd>div>i{
     background-position: -168px -61px;
 }
-
+#banner .banner-data-box .banner-data-box-two>form>dl>dt{
+    height: 28px;
+    width: 100%;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(1){
+    display: block;
+    text-align: right;
+    margin-right: 17px;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(1)>a{
+    line-height: 26px;
+    text-decoration: underline;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(2){
+    text-align: center;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(2) .btn{
+    background: #000;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    width: 312px;
+    outline: none;
+    cursor: pointer;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(3){
+    margin-top: 10px;
+    text-align: center;
+    color: #999;
+    font: 12px/20px tahoma,'Microsoft YaHei';
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4){
+    text-align: center;
+    margin-top: 5px;
+    color: #e1e1e1 ;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4)>a{
+    margin: 0 5px;
+    padding: 9px 16px;
+    line-height: 54px;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4)>a:nth-child(1){
+    background-position: -37px -21px;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4)>a:nth-child(2){
+    background-position: -73px -21px;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4)>a:nth-child(3){
+    background-position: -110px -22px;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4)>a:nth-child(4){
+    background-position: -37px -57px;
+}
+#banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(4)>a:nth-child(5){
+    background-position: -73px -57px;
+}
 
 #footer p{
     line-height: 20px;
