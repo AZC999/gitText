@@ -156,8 +156,8 @@
     })
   })
   //点击显示和隐藏
-  $('.filter-list-wrap').on('click',function () {
-    $('.filter-list-wrap>li>div>ul').toggle()
+  $('.filter-list-wrap').on('click','p',function () {
+    $(this).next().toggle()
   })
 </script>
 <!-- 中间部分 -->

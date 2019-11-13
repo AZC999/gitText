@@ -25,7 +25,7 @@ body{
 	width: 100%;
 	height: 40px;
 	background: #333;
-	font-size: 12px;	
+	font-size: 12px;
 }
 #header-vue-left{
 	margin-left: 120px;
@@ -35,7 +35,7 @@ body{
 }
 #header-vue-left a{
 	line-height: 40px;
-	color: #FFFFFF;	
+	color: #FFFFFF;
 	padding-left: 20px;
 }
 #header-vue-left a:hover{opacity: 0.5;
@@ -78,7 +78,7 @@ text-decoration: none;}
 	height:231px;
 	background-color: #fff;
 	margin: 0 auto;
-	
+
 	box-sizing: border-box;
 }
 .logo img{width: 98px;
@@ -109,33 +109,43 @@ margin-top: 60px;}
 	line-height: 30px;
 }
 #container_n{
-	width: 1190px;
+	width: 100%;
+	height: 58px;
+	margin: 0 auto;
+	background-color: #fff;
+	z-index: 1000;
+}
+#nav{
+	height: 58px;
+	position: relative;
+}
+#nav-top{
+	width: 100%;
 	height: 58px;
 	margin: 0 auto;
 }
-#nav{
-	height: 60px;
-	position: relative;
-}
 #nav-buttom{
-	height: 50px;	
+	/* height: 58px; */
 }
 .nav-head{
 	width: 930px;
-	height: 50px;
+	/* height: 50px; */
 	float: left;
+	margin-left: 100px;
+	background-color: #fff;
 }
 .nav-head li{
 	float: left;
 	width: 110px;
 	font-size: 20px;
-	line-height: 50px;
+	line-height: 58px;
 	font-weight: 700;
 }
 .search{
 	float: right;
-	line-height: 50px;
+	line-height: 58px;
 	margin-left: -20px;
+	margin-right: 100px;
 }
 .search li{
 	margin-top: -10px;
@@ -149,18 +159,24 @@ margin-top: 60px;}
 	width: 20px;
 	height: 20px;
 }
+#nav-buttom{
+
+	background-color: #fff;
+}
 .nav-down{
 	position: absolute;
-	width: 1190px;
+	width: 100%;
 	height: 260px;
-	top:58px;
+	top:60px;
 	display: none;
 	background: #FFFFFF;
+	border-bottom: 2px solid #000;
+	z-index: 2000;
 }
 .nav-down ul{
 	float: left;
 	width: 20%;
-	padding-left: 20px;
+	padding-left: 100px;
 	box-sizing: border-box;
 }
 .nav-down a{
@@ -191,7 +207,7 @@ margin:  0 auto;
 	margin: auto;
 }
 .a_swiperBox{
-	
+
 	height: 500px;
 	margin: 0 auto;
 	padding: 10px;
@@ -282,7 +298,7 @@ font-size: 14px;}
 justify-content: space-around;
 margin: 50px auto;
 margin-bottom: 50px;
-box-sizing: border-box;} 
+box-sizing: border-box;}
 .a_downvideo{width: 1078px;
 height: 450px;
 margin-top: 30px;
@@ -372,14 +388,3 @@ justify-content: space-around;}
 .a_vio .video1{object-fit:fill;}
 .a_vio video:hover{opacity: 0.5;}
 .a_vio img:hover{opacity: 0.5;}
-#a_box {
-      position: fixed;
-      right: 5px;
-      bottom: 5px;
-      width: 120px;
-      height: 45px;
-      text-align: center;
-      line-height: 45px;
-      background-color: #6ff;
-      border-radius: 5px;
-    }

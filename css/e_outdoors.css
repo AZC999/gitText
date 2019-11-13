@@ -67,7 +67,25 @@
   margin-right: 9px;
   margin-top: 3px;
 }
-
+.filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li>div {
+  display: none;
+}
+.filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li.checkbox>div>ul {
+  padding-left: 10px;
+}
+.filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li.checkbox>div>ul>li {
+  margin-top: 10px;
+  font-weight: normal;
+}
+.filter-wrap .filter-sub-wrap .filter-sub-navlist ul.filter-list-wrap>li.checkbox>div>ul>li label {
+  display: inline-block;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  padding-left: 20px;
+}
 /* 新品，销售，推荐 */
 .filter-wrap .filter-sub-wrap .filter-sub-content {
   float: right;
