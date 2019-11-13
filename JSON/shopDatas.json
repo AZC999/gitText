@@ -1,0 +1,80 @@
+[
+    {
+        "shopCode": "shop1",
+        "shopCUrl": [
+            "color1",
+            "../img/101001660_01_c.jpg"
+        ],
+        "shopTUrl": [
+            "../img/101001660_01_t.jpg",
+            "../img/101001660_02_t.jpg",
+            "../img/101001660_03_t.jpg",
+            "../img/101001660_04_t.jpg",
+            "../img/101001660_05_t.jpg",
+            "../img/101001660_06_t.jpg",
+            "../img/101001660_07_t.jpg"
+        ],
+        "shopMUrl": [
+            "../img/101001660_01_m.jpg",
+            "../img/101001660_02_m.jpg",
+            "../img/101001660_03_m.jpg",
+            "../img/101001660_04_m.jpg",
+            "../img/101001660_05_m.jpg",
+            "../img/101001660_06_m.jpg",
+            "../img/101001660_07_m.jpg"
+        ],
+        "shopLUrl": [
+            "../img/101001660_01_l.jpg",
+            "../img/101001660_01_2.jpg",
+            "../img/101001660_01_3.jpg",
+            "../img/101001660_01_4.jpg",
+            "../img/101001660_01_5.jpg",
+            "../img/101001660_01_6.jpg",
+            "../img/101001660_01_7.jpg"
+        ],
+        "shopLogo": "../img/blackS-joypeace.png",
+        "shopTitle": "真美诗2018冬季新款羊绒皮尖头粗跟短筒女皮靴YPK28DD8",
+        "shopBrand": "Joy&Peace",
+        "shopPrice": "678",
+        "originPrice": "678"
+    },
+    {
+        "shopCode": "shop1",
+        "shopCUrl": [
+            "color1",
+            "../img/101001671_01_c.jpg"
+        ],
+        "shopTUrl": [
+            "../img/101001671_01_t.jpg",
+            "../img/101001671_02_t.jpg",
+            "../img/101001671_03_t.jpg",
+            "../img/101001671_04_t.jpg",
+            "../img/101001671_05_t.jpg",
+            "../img/101001671_06_t.jpg",
+            "../img/101001671_07_t.jpg"
+        ],
+        "shopMUrl": [
+            "../img/101001671_01_m.jpg",
+            "../img/101001671_02_m.jpg",
+            "../img/101001671_03_m.jpg",
+            "../img/101001671_04_m.jpg",
+            "../img/101001671_05_m.jpg",
+            "../img/101001671_06_m.jpg",
+            "../img/101001671_07_m.jpg"
+        ],
+        "shopLUrl": [
+            "../img/101001671_01_l.jpg",
+            "../img/101001671_01_2.jpg",
+            "../img/101001671_01_3.jpg",
+            "../img/101001671_01_4.jpg",
+            "../img/101001671_01_5.jpg",
+            "../img/101001671_01_6.jpg",
+            "../img/101001671_01_7.jpg"
+        ],
+        "shopLogo": "../img/blackS-joypeace.png",
+        "shopTitle": "真美诗2018冬季新款羊绒皮尖头粗跟短筒女皮靴YPK28DD8",
+        "shopBrand": "Joy&Peace",
+        "shopPrice": "678",
+        "originPrice": "678"
+    }
+]

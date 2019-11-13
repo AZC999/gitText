@@ -1,4 +1,4 @@
-define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePage", "priceSort","priceSection"], function ($, judgePages, loadPages, loadShops, listItem, activePage, priceSort,priceSection) {
+define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePage", "priceSort", "priceSection"], function ($, judgePages, loadPages, loadShops, listItem, activePage, priceSort, priceSection) {
     var shopsAjax; //储存请求过来的商品数据
     var priceShopsHolder;
     var getdistance;
@@ -79,7 +79,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
         } else {
             $('form').css("position", "relative");
         }
-        if(getSorllT+clientH>=maxT){
+        if (getSorllT + clientH >= maxT) {
             $('form').css("position", "relative");
         }
         var judgeFlag = $('.now-pages>.pages>.curr').text();
@@ -130,7 +130,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
                     loadPages(data);
                     shopsAjax = data;
                 }
-            ).error(function() {
+            ).error(function () {
                 loadShops([], 0, 0);
                 loadPages([]);
             })
@@ -159,7 +159,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
         // 为价格添加事件
         if ($(this).text() == "价格") {
             // 判断priceShopsHolder是否有值 有值就不再重新赋值
-            priceShopsHolder = priceShopsHolder?priceShopsHolder:shopsAjax;
+            priceShopsHolder = priceShopsHolder ? priceShopsHolder : shopsAjax;
 
             if ($(this).parent().hasClass('arrow-up')) {
                 $(this).parent().removeClass('arrow-up');
@@ -173,10 +173,10 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
             return;
         }
         // 如果不是价格就将样式清楚
-        if($('.sub-title-tab>li>a').parent().hasClass('arrow-up')){
+        if ($('.sub-title-tab>li>a').parent().hasClass('arrow-up')) {
             $('.sub-title-tab>li>a').parent().removeClass('arrow-up');
         }
-        if($('.sub-title-tab>li>a').parent().hasClass('arrow-down')){
+        if ($('.sub-title-tab>li>a').parent().hasClass('arrow-down')) {
             $('.sub-title-tab>li>a').parent().removeClass('arrow-down');
         }
 
@@ -186,5 +186,10 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
             loadShops(shopsAjax, 16, $('.goods-container .goods-head>a>img').length);
             // loadPages(shopsAjax);
         }
+    })
+
+    // 设置 localStorage 详情页获取 shopCode
+    $('.goods-container').on('click', 'li', function () {
+        localStorage.setItem("shopCode", $(this).attr('_setCode'));
     })
 });
