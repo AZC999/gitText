@@ -68,6 +68,7 @@
     line-height: 40px;
     float: left;
     text-align: center;
+    text-decoration: none !important;
 }
 #banner .banner-data-box .banner-data-top a:nth-child(1){
     margin-left: 53px;
