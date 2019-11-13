@@ -1,4 +1,5 @@
 <?php
+    //手机号验证页
     header("Content-Type:text/html;charset=utf-8");
 
     $uphone = $_GET['uphone'];

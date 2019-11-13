@@ -27,7 +27,7 @@ $(function(){
         }
         return random;
     }
-    var Six_code = six_code();
+    var Six_code;
 
     //点击获取4位数随机验证码
     function obtain(_this){
@@ -118,6 +118,7 @@ $(function(){
 
     // 点击判断获取6位数随机验证码
     $('.captcha').click(function(){
+        Six_code = six_code();
         if(flag_1 && flag_2){
             $(this).prev().removeClass('frame-style').parent().next().children().addClass('dd').html('验证码已成功发送，请注意查收!').css('color','#009645')
             console.log(`短信验证码：${Six_code}`);
@@ -271,4 +272,5 @@ $(function(){
     $('.sub').click(function(){
         sub();
     })
+
 })

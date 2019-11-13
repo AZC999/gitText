@@ -97,7 +97,7 @@
 #banner .banner-data-box .banner-data-box-two>form dl dd{
     width: 100%;
 }
-#banner .banner-data-box .banner-data-box-two>form>dl>dd>div{
+.border{
     width: 313px;
     height: 38px;
     box-sizing: border-box;
@@ -113,6 +113,9 @@
     outline: none;
     font-size: 12px;
 }
+#banner .banner-data-box .banner-data-box-two>form>dl>dd>.account-two{
+    display: none;
+}
 #banner .banner-data-box .banner-data-box-two>form>dl>dd>div>i{
     display: block;
     width: 48px;
@@ -125,9 +128,53 @@
 #banner .banner-data-box .banner-data-box-two>form>dl:nth-child(2)>dd>div>i{
     background-position: -168px -61px;
 }
+#banner .banner-data-box .banner-data-box-two>form>dl>.frame>.frame-left{
+    border: 1px solid #e3e2e2;
+    box-sizing: border-box;
+    height: 38px;
+    width: 235px;
+    float: left;
+    display: none;
+}
+.label{
+    font-size: 12px;
+    height: 38px;
+    line-height: 38px;
+    margin-left: 10px;
+    text-align: left;
+    width: 60px;
+    float: left;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>.frame>.frame-left>.uxu{
+    border: 0;
+    float: right;
+    height: 36px;
+    line-height: 36px;
+    width: 155px;
+    font-size: 12px;
+    font-family: tahoma,\5FAE\8F6F\96C5\9ED1;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>.frame>.frame-right{
+    float: right;
+    display: none;
+}
+#banner .banner-data-box .banner-data-box-two>form>dl>.frame>.frame-right>a{
+    background: #323232;
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    height: 38px;
+    line-height: 38px;
+    margin-right: 17px;
+    text-align: center;
+    width: 73px;
+}
 #banner .banner-data-box .banner-data-box-two>form>dl>dt{
     height: 28px;
     width: 100%;
+}
+.heig{
+    height: 5px;
 }
 #banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(1){
     display: block;
@@ -136,7 +183,7 @@
 }
 #banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(1)>a{
     line-height: 26px;
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 #banner .banner-data-box .banner-data-box-two>form>p:nth-of-type(2){
     text-align: center;
