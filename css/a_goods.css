@@ -382,6 +382,7 @@ height: auto;
 .a_vio{display: flex;
 justify-content: space-around;}
 .a_vio .video {object-fit:fill;
+
 }
 .a_vio .video1{object-fit:fill;}
 .a_vio img:hover{opacity: 0.5;}
