@@ -18,35 +18,35 @@ img{
 body{
 	font-family: "微软雅黑"; font-size: 12px;
 }
-a{text-decoration: none;}
+a{text-decoration: none !important;}
 .clearfix:after{
 	content: ""; display: block; overflow: hidden; height: 0; font-size: 0; visibility: hidden;
 	clear: both;
 }
-  
+
 
 /* CSS Document */
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption{
 	margin:0;
-	padding:0;	
+	padding:0;
 }
 body,html{
 	font:16px "微软雅黑",Arial;
-	color:#333333;	
+	color:#333333;
 }
 h1,h2,h3,h4,h5,h6,b,strong{
 	font-weight:normal;
-	font-size:100%;	
+	font-size:100%;
 }
 i,em{
-	font-style:normal;	
+	font-style:normal;
 }
 a{
 	text-decoration:none;
-	color:#333333;	
+	color:#333333;
 }
 li{
-	list-style:none;	
+	list-style:none;
 }
 .clearfix{
     *zoom: 1;
