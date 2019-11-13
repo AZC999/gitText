@@ -27,7 +27,9 @@ $('#head').load("head.html", function () {
         $(window).scroll(function(){
             var scroH=$(this).scrollTop()
             if(scroH>=navH){
-                $("#container_n").css({"position":"fixed","top":0})
+                $("#container_n").css({"position":"fixed","top":"0"})
+                $("#nav").css({"border-bottom":"2px solid #000"})
+                $(".nav-down").css({"border-bottom":"2px solid #000"})
             }else if(scroH<navH){
                 $("#container_n").css({"position":"static"})
             }
