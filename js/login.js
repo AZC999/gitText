@@ -45,4 +45,8 @@ $(function(){
             pwd('.pwd');
         }
     })
+
+    //点击手机号快捷登录
+    console.log($('.banner-data-box-one a[1]'));
+    
 })
