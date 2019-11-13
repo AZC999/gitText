@@ -125,7 +125,7 @@ margin-top: 60px;}
 	margin: 0 auto;
 }
 #nav-buttom{
-	height: 58px;
+	/* height: 58px; */
 }
 .nav-head{
 	width: 930px;
@@ -170,6 +170,7 @@ margin-top: 60px;}
 	top:60px;
 	display: none;
 	background: #FFFFFF;
+	border-bottom: 2px solid #000;
 	z-index: 2000;
 }
 .nav-down ul{
