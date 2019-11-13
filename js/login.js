@@ -62,7 +62,6 @@ $(function(){
         $(_this).parent().removeClass('frame-style').parent().next().children().removeClass('pp').html('');
         if($(_this).val()){
             if(!phoneVerify()){
-                console.log(1);
                 $(_this).parent().addClass('frame-style').parent().next().children().addClass('pp').html('格式错误');
             }else{
                 return true;
@@ -100,9 +99,9 @@ $(function(){
     var flag = 0;
     var code;
     function hq(){
-        var time = 6;
-        $('.hq').children().html(time + '秒');
         if(!flag && !timer){
+            var time = 60;
+            $('.hq').children().html(time + '秒');
             flag = 1;
             code = stochastic();
             console.log('短信验证码：' + code);
@@ -173,7 +172,7 @@ $(function(){
                         cache: 'false',
                         data: 'uphone=' + $('.pop').val(),
                         success: function(data){
-                            if(data){
+                            if(Number(data)){
                                 location.href = 'a_shouye.html';
                                 localStorage.setItem("uphone",$('.pop').val());
                             }

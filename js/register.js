@@ -117,20 +117,49 @@ $(function(){
     })
 
     // 点击判断获取6位数随机验证码
-    $('.captcha').click(function(){
+    function captcha(_this){
         Six_code = six_code();
         if(flag_1 && flag_2){
-            $(this).prev().removeClass('frame-style').parent().next().children().addClass('dd').html('验证码已成功发送，请注意查收!').css('color','#009645')
+            $(_this).prev().removeClass('frame-style').parent().next().children().addClass('dd').html('验证码已成功发送，请注意查收!').css('color','#009645')
             console.log(`短信验证码：${Six_code}`);
         }else{
             txt('.txt');
             dxd('.dxd');
-            if(flag_1){
-                $(this).prev().addClass('frame-style').parent().next().children().addClass('pp').html('图片验证码校验失败!');
-                $('.dxd').parent().addClass('frame-style').parent().next().children().addClass('pp').html('验证码不正确');
-            }
+            $(_this).prev().addClass('frame-style').parent().next().children().addClass('pp').html('图片验证码校验失败!');
+        }
+    }
+    $('.captcha').click(function(){
+        if(flag_1 && flag_2){
+            hq(this);
+        }else{
+            txt('.txt');
+            dxd('.dxd');
         }
     })
+
+    //60秒内不能点击获取
+    var timer = null;
+    var flag = 0;
+    function hq(_this){
+        if(!flag && !timer){
+            var time = 3;
+            $('.captcha').html(time + '秒');
+            flag = 1;
+            captcha(_this);
+            timer = setInterval(() => {
+                time--;
+                $('.captcha').html(time + '秒');
+                if(time === 0){
+                    flag = 0;
+                    clearInterval(timer);
+                    timer = null;
+                    $('.captcha').html('重新获取');
+                }
+            },1000);
+        }
+    }
+
+
 
     //短信验证码验证
     function yxy(_this){
