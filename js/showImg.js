@@ -33,7 +33,6 @@ $('#head').load("head.html", function () {
             }else if(scroH<navH+10){
                 $("#container_n").css({"position":"static"})
                 $("#nav-top").css({"border-bottom":0})
-                $(".nav-down").css({"border-bottom":0})
             }
         })
     })
