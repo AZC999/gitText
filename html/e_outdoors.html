@@ -157,6 +157,27 @@
   $('.filter-list-wrap').on('click','p',function () {
     $(this).next().toggle()
   })
+
+  //页面滚动固定在左侧
+  $(function () {
+    var navH = $('.filter-sub-navlist').offset().top+330
+    $(document).scroll(function () {
+      var vieH=$(window).height()//可见高度
+      var scroH = $(this).scrollTop()//滚动高度
+      var contentH=$(this).height()//内容高度
+      if (scroH > navH) {
+        $(".filter-sub-navlist").css({ "position": "fixed", "top": 100 })
+
+      } else if (scroH <= navH) {
+        $(".filter-sub-navlist").css({ "position": "static" })
+      }
+      if(contentH-scroH-vieH<=600){
+        $(".filter-sub-navlist").hide()
+      }else{
+        $(".filter-sub-navlist").show()
+      }
+    })
+  })
 </script>
 <!-- 中间部分 -->
 <script>
@@ -169,10 +190,10 @@
       cache: false,
       success: function (json) {
         jsons = json
-        console.log(json)
         for (var n = 0; n < 20; n++) {
           every(jsons[n])
         }
+        $(".filter-sub-navlist>p>.res").html(jsons.length)
       }
     })
   })
