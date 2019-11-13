@@ -70,6 +70,7 @@
     height: 40px;
     line-height: 40px;
     float: left;
+    text-decoration: none !important;
 }
 /* 共用样式 */
 .style{
