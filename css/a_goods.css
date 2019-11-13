@@ -120,6 +120,8 @@ margin-top: 60px;}
 	position: relative;
 }
 #nav-top{
+	width: 100%;
+	height: 58px;
 	margin: 0 auto;
 }
 #nav-buttom{
@@ -127,7 +129,7 @@ margin-top: 60px;}
 }
 .nav-head{
 	width: 930px;
-	height: 50px;
+	/* height: 50px; */
 	float: left;
 	margin-left: 100px;
 	background-color: #fff;
@@ -136,12 +138,12 @@ margin-top: 60px;}
 	float: left;
 	width: 110px;
 	font-size: 20px;
-	line-height: 50px;
+	line-height: 58px;
 	font-weight: 700;
 }
 .search{
 	float: right;
-	line-height: 50px;
+	line-height: 58px;
 	margin-left: -20px;
 	margin-right: 100px;
 }
