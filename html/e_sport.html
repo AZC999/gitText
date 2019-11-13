@@ -63,7 +63,7 @@
             <div class="page-sum">
               <span>1</span>
               -
-              <span>47</span>
+              <span>3</span>
               页
               <span>
                 <span></span>
@@ -104,11 +104,11 @@
   <!-- 分页部分 -->
   <div class="newPage">
     <div class="d_pa clearfix fr mb20 mr40">
-      <a href="#"> &lt;上一页 </a>
+      <a href="#" class="previous"> &lt;上一页 </a>
       <a href="#" class="curr abtn">1</a>
       <a href="#" class="abtn">2</a>
       <a href="#" class="abtn">3</a>
-      <a href="#">下一页&gt;</a>
+      <a href="#" class="next">下一页&gt;</a>
     </div>
   </div>
   <div id="foot"></div>
@@ -156,8 +156,29 @@
     })
   })
   //点击显示和隐藏
-  $('.filter-list-wrap').on('click','p',function () {
+  $('.filter-list-wrap').on('click', 'p', function () {
     $(this).next().toggle()
+  })
+
+  //页面滚动固定在左侧
+  $(function () {
+    var navH = $('.filter-sub-navlist').offset().top+330
+    $(document).scroll(function () {
+      var vieH=$(window).height()//可见高度
+      var scroH = $(this).scrollTop()//滚动高度
+      var contentH=$(this).height()//内容高度
+      if (scroH > navH) {
+        $(".filter-sub-navlist").css({ "position": "fixed", "top": 100 })
+
+      } else if (scroH <= navH) {
+        $(".filter-sub-navlist").css({ "position": "static" })
+      }
+      if(contentH-scroH-vieH<=600){
+        $(".filter-sub-navlist").hide()
+      }else{
+        $(".filter-sub-navlist").show()
+      }
+    })
   })
 </script>
 <!-- 中间部分 -->
@@ -189,6 +210,18 @@
     for (var n = head1; n < foot1; n++) {
       every(jsons[n])
     }
+  })
+  //点击上一页页面跳转
+  $(".previous").bind("click", function () {
+    // $('a').removeClass('curr')
+    // // $(this).addClass('curr')
+    // var as1 = $('.abtn')
+    // var head1 = ($(this).html() - 1) * 20
+    // var foot1 = $(this).html() * 20
+    // $('.new_prdlist').empty()
+    // for (var n = head1; n < foot1; n++) {
+    //   every(jsons[n])
+    // }
   })
 
   //封装这个函数

@@ -79,7 +79,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
         } else {
             $('form').css("position", "relative");
         }
-        if(getSorllT+clientH>=maxT){
+        if (getSorllT + clientH >= maxT) {
             $('form').css("position", "relative");
         }
         var judgeFlag = $('.now-pages>.pages>.curr').text();
@@ -130,7 +130,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
                     loadPages(data);
                     shopsAjax = data;
                 }
-            ).error(function() {
+            ).error(function () {
                 loadShops([], 0, 0);
                 loadPages([]);
             })
@@ -187,5 +187,10 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
             loadShops(shopsAjax, 16, $('.goods-container .goods-head>a>img').length);
             // loadPages(shopsAjax);
         }
+    })
+
+    // 设置 localStorage 详情页获取 shopCode
+    $('.goods-container').on('click', 'li', function () {
+        localStorage.setItem("shopCode", $(this).attr('_setCode'));
     })
 });

@@ -2,6 +2,7 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
     // 加载商品
     return function (shops, count, hascount) {
         var shopscount = shops.length;
+        var _code = null;
         $('.res').text(shopscount);
         if(!shopscount){
             count = 0;
@@ -24,10 +25,13 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
                 // count = i;
                 break;
             }
+            if(shops[i]["_setCode"]){
+                _code = shops[i]["_setCode"];
+            }
             var newImg = new Image();
             newImg.src = shops[i]['shopUrl'];
             newImg['index-data'] = holdcount == hascount ? i % 20 : i % 20 - 1;
-            var newGoods = `<li>
+            var newGoods = `<li _setCode=${_code}>
                             <div class="goods-head"><a href="#"><img src="../img/loadingShop.gif" alt=""></a></div><div class="goods-desc"><a href="#" ><span class="nptt">${shops[i]['shopBrand']}${shops[i]['shopDescrip']}</span></a><p><em class="now-price">¥<i>${shops[i]['shopNowPrice']}</i></em><span class="origin-price">¥<i>${shops[i]['shopOriginPrice']}</i></span></p></div></li>`;
             $('.goods-container').append(newGoods);
             newImg.onload = function () {

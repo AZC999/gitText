@@ -24,7 +24,7 @@ $(function(){
 
     //点击登录
     $('.btn').click(function(){
-        if($('.pwd').val() && $('.pwd').val()){
+        if($('.txt').val() && $('.pwd').val()){
             $.ajax({
                 type: 'post',
                 url: './../php/login.php',
@@ -33,6 +33,7 @@ $(function(){
                 success: function(data){
                     if(Number(data)){
                         location.href = 'a_shouye.html?data=' + $('.txt').val();
+                        localStorage.setItem("uphone",$('.txt').val());
                     }else{
                         $('.txt').parent().addClass('frame-style').parent().next().children().addClass('pp').html('您的账号或密码有误');
                         $('.pwd').val('').parent().addClass('frame-style');
@@ -44,4 +45,8 @@ $(function(){
             pwd('.pwd');
         }
     })
+
+    //点击手机号快捷登录
+    console.log($('.banner-data-box-one a[1]'));
+    
 })

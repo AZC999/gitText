@@ -1,5 +1,14 @@
-
 $('#head').load("head.html", function () {
+    var headHolder;
+    if(localStorage.getItem('uphone')){
+        headHolder = $('.showName').html();
+        $('.showName').get(0).innerHTML = `<a href="#"> ${localStorage.getItem('uphone')}</a> <a class = "exit" href="#">[退出]</a>`;
+        $('.exit').click(function(){
+            $('.showName').get(0).innerHTML = headHolder;
+            localStorage.setItem('uphone','');
+        })
+    }
+    
     //  头left的隐藏
     $("#header-vue-left div a").hover(function () {
         $(this).addClass("active").siblings().removeClass("active");
@@ -26,13 +35,13 @@ $('#head').load("head.html", function () {
         var navH=$("#container_n").offset().top
         $(window).scroll(function(){
             var scroH=$(this).scrollTop()
-            if(scroH>=navH+10){
+            if(scroH>navH){
                 $("#container_n").css({"position":"fixed","top":"0"})
                 $("#nav-top").css({"border-bottom":"2px solid #000"})
                 $(".nav-down").css({"border-bottom":"2px solid #000"})
-            }else if(scroH<navH+10){
+            }else if(scroH<=navH){
                 $("#container_n").css({"position":"static"})
-                $("#nav-top").css({"border-bottom":0})
+                $("#nav-top").css({"border-bottom":"1px solid #ccc"})
             }
         })
     })
