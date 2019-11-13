@@ -1,4 +1,14 @@
 $('#head').load("head.html", function () {
+    var headHolder;
+    if(localStorage.getItem('uphone')){
+        headHolder = $('.showName').html();
+        $('.showName').get(0).innerHTML = `<a href="#"> ${localStorage.getItem('uphone')}</a> <a class = "exit" href="#">[退出]</a>`;
+        $('.exit').click(function(){
+            $('.showName').get(0).innerHTML = headHolder;
+            localStorage.setItem('uphone','');
+        })
+    }
+    
     //  头left的隐藏
     $("#header-vue-left div a").hover(function () {
         $(this).addClass("active").siblings().removeClass("active");

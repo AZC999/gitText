@@ -56,7 +56,7 @@ text-decoration: none;}
 #header-vue-right a:hover{opacity: 0.5;
 text-decoration: none;}
 #header-vue-right>ol{
-	width: 260px;
+	min-width: 260px;
 }
 #header-vue-right>ol>li{
 	line-height: 40px;
