@@ -197,16 +197,24 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     // 给收藏数据
     $('.goods-container').on('click', '.collect', function () {
         if (localStorage.getItem('uphone')) {
-            var collectHolder = `{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}`;
 
             if(localStorage.getItem(`${localStorage.getItem('uphone')}collect`)){
-                var collectArr = [localStorage.getItem(`${localStorage.getItem('uphone')}collect`)];
+                var collectHolder = `{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}`;
+            } else {
+                var collectHolder = `[{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}]`;
+            }
+            collectHolder = JSON.parse(collectHolder);
+
+            if(localStorage.getItem(`${localStorage.getItem('uphone')}collect`)){
+                var collectArr = localStorage.getItem(`${localStorage.getItem('uphone')}collect`);
+                collectArr = JSON.parse(localStorage.getItem(`${localStorage.getItem('uphone')}collect`));
                 collectArr.push(collectHolder);
             } else {
-                var collectArr = [collectHolder];
+                var collectArr = collectHolder;
             }
-            
+            collectArr = JSON.stringify(collectArr);
             localStorage.setItem(`${localStorage.getItem('uphone')}collect`, collectArr);
+
             $(this).addClass('hobby');
             // 出现收藏提示框
             $('.mask').show();
@@ -228,6 +236,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     // 关闭收藏框
     $('.close').click(function () {
         $('.mask').hide();
+        clearInterval(timer);
     })
     // 设置收藏框大小
     $('.mask').css('width', $(document).width());
