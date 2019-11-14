@@ -1,4 +1,4 @@
-$('#head').load("head.html", function () {
+$('#head').load("head.html", function (){
     var headHolder;
     if(localStorage.getItem('uphone')){
         headHolder = $('.showName').html();
