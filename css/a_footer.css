@@ -50,7 +50,6 @@ text-decoration: none;}
 	background-color: #333;
 	margin: 0 auto;
 	width: 1105px;
-	padding-bottom: 20px;
 	box-sizing: border-box;
 }
 .certification ul{
@@ -60,7 +59,7 @@ text-decoration: none;}
 .certification ol{
 	float: left;
 	margin-left: 180px;
-	padding-top: 70px;
+	padding-top: 64px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
