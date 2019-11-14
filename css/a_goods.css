@@ -381,9 +381,9 @@ max-width: 100%;
 height: auto;
 }
 .a_vio{display: flex;
-justify-content: space-around;}
-.a_vio .video {object-fit:fill;
-
-}
-.a_vio .video1{object-fit:fill;}
+justify-content: space-around;
+padding-top: 120px;
+box-sizing: border-box;}
+#videoB{background-color: #000000;}
 .a_vio img:hover{opacity: 0.5;}
+.a_pho{margin: 0 auto;}

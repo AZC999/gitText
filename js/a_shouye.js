@@ -34,13 +34,3 @@
  		yaoVideo.pause()
  	}
  </script>
- <script>
- 	var yaoVideo2 = document.getElementById("videoC")
- 	
- 	function play(){
- 		if (yaoVideo.paused)
- 		yaoVideo.play()
- 		else
- 		yaoVideo.pause()
- 	}
- </script>
