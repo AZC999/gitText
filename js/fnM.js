@@ -192,4 +192,35 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     $('.goods-container').on('click', 'li', function () {
         localStorage.setItem("shopCode", $(this).attr('_setCode'));
     })
+
+    // 给收藏数据
+    $('.goods-container').on('click', '.collect', function () {
+        if (localStorage.getItem('uphone')) {
+            localStorage.setItem(`${localStorage.getItem('uphone')}collect`, `{"shopUrl":${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")},"shopTitle"${$(this).prev().prev().children().eq(0).text()}:,"shopPrice":${$(this).prev().children().eq(0).children().eq(0).text()},"shopSize":1,"shopColor":"绿色"}`);
+            $(this).addClass('hobby');
+            // 出现收藏提示框
+            $('.mask').show();
+            var flag = 10;
+            $('.timeCount').text(`倒计时${flag}秒后自动关闭`);
+            timer = setInterval(function () {
+                flag--;
+                $('.timeCount').text(`倒计时${flag}秒后自动关闭`);
+                if (flag <= 0) {
+                    $('.mask').hide();
+                    clearInterval(timer);
+                }
+            }, 1000)
+        } else {
+            alert('请先登录您的账号！');
+            location.href = "./register.html";
+        }
+    })
+    // 关闭收藏框
+    $('.close').click(function () {
+        $('.mask').hide();
+    })
+    // 设置收藏框大小
+    $('.mask').css('width', $(document).width());
+    $('.mask').css('height', $(document).height());
+    
 });

@@ -372,3 +372,47 @@
 .goods-container>li:hover .goods-desc em.collect{
     display: block;
 }
+.goods-desc em.collect.hobby {
+    width: 19px;
+    height: 19px;
+    background: url(../img/css_sprites.png) -138px -49px;
+}
+.uiTable {
+    zoom: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;right: 0;bottom: 0;left: 0;
+    margin: auto;
+    width: 210px;
+    height: 150px;
+    background: url(../img/ubg.png) no-repeat #fff  20px 50px;
+    border: #333 solid 3px;
+}
+.close{
+    display: block;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.colTxt{
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 50px 0 10px 80px;
+}
+.ml80{
+    margin-left: 80px;
+}
+.timeCount{
+    color: #666;
+    margin-top: 10px;
+    display: block;
+}
+.mask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(126, 124, 124,.5);
+    z-index: 99999;
+}
