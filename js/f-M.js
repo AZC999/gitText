@@ -22,6 +22,6 @@ require.config({
     }
 })
 
-require(["jquery","indexFn", "judgePage", "loadPage", "loadShop", "loadListItem", "activePage", "loadBrand","priceSort","priceSection","act"], function ($) {
+require(["indexFn","jquery", "judgePage", "loadPage", "loadShop", "loadListItem", "activePage", "loadBrand","priceSort","priceSection","act"], function (b,$) {
     $('#foot').load('foot.html');
 });

@@ -230,7 +230,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
             }, 1000)
         } else {
             alert('请先登录您的账号！');
-            location.href = "./register.html";
+            location.href = "./login.html";
         }
     })
     // 关闭收藏框
