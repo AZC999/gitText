@@ -40,7 +40,6 @@ body{
     font-weight: bold;
     color:white;
 }
-
 .jiaoyizx{
     background: #fcfcfc;
     border-left:1px solid #e3e3e3; 
@@ -49,7 +48,6 @@ body{
     padding-top: 10px;
     padding-left: 38px;
 }
-
 .ultit{
     height: 37px;
     line-height: 37px;
@@ -78,7 +76,6 @@ body{
     left: -10px;
     top: -5px;
 }
-
 .wodezc{
     background: #fcfcfc;
     border-left:1px solid #e3e3e3; 
@@ -96,13 +93,10 @@ body{
 .shouhoufw{
     background: #fcfcfc;
     border-left:1px solid #e3e3e3; 
-    border-right:1px solid #e3e3e3; 
-    /* border-bottom:1px solid #e3e3e3;  */
+    border-right:1px solid #e3e3e3;
     height: 98px;
     padding-left: 38px;
-    /* margin-bottom: 25px; */
 }
-
 .hotlist_tit{
     height: 40px;
     line-height: 40px;
@@ -112,10 +106,10 @@ body{
     font-weight: bold;
 }
 .hotlist_dl{
-height: 452px;
-border-left:1px solid #e3e3e3; 
-border-right:1px solid #e3e3e3; 
-overflow: hidden;
+    height: 452px;
+    border-left:1px solid #e3e3e3; 
+    border-right:1px solid #e3e3e3; 
+    overflow: hidden;
 }
 .hotlist_dl dl {
     margin: 3px 0;
@@ -150,27 +144,21 @@ overflow: hidden;
     color: #ccc;
     text-decoration: line-through;
 }
-
-
 .last{
     height: 40px;
     line-height: 40px;
     border: 1px solid #e3e3e3;
     text-align: center;
-
 }
-
-
-
-
 .uc_right{
     float: left;
     width: 830px;
+    margin-bottom: 20px;
 }
 .uc_tab{
     height: 35px;
     border-bottom: 1px solid #f1f1f1;
-    overflow: hidden; 
+    overflow: hidden;
 }
 .uc_tab a{
     display: inline-block;
@@ -190,13 +178,11 @@ overflow: hidden;
 .uc_tab .a_choosed{
     color: #666666;
 }
-
 .uc_fav_list{
     border: 1px solid #e3e3e3;
     overflow: hidden;
     margin-top: 10px;
 }
-
 .uc_fav_header{
     border-bottom: 1px solid #e3e3e3;
     height: 34px;
@@ -218,12 +204,10 @@ overflow: hidden;
 .cz{
     width: 195px;
 }
-
 .uc_fav_c{
     width: 804px;
     margin: 0 auto;
 }
-
 .uc_fav_c li{
     border-bottom: 1px solid #ececec;
     padding: 18px 0 18px;
