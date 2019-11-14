@@ -69,18 +69,18 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
         var getSorllT = document.documentElement.scrollTop || document.body.scrollTop;
         var clientH = document.documentElement.clientHeight || document.body.clientHeight;
         var maxT = $('.footer').get(0).offsetTop;
-
+        $('.filter-sub-navlist').css("top", "0px");
         if (!getdistance) {
-            getdistance = $('form').get(0).offsetTop;
+            getdistance = $('.filter-sub-navlist').get(0).offsetTop;
         }
         if (getdistance <= getSorllT) {
-            $('form').css("position", "fixed");
-            $('form').css("top", "0");
+            $('.filter-sub-navlist').css("position", "fixed");
+            $('.filter-sub-navlist').css("top", "60px");
         } else {
-            $('form').css("position", "relative");
+            $('.filter-sub-navlist').css("position", "relative");
         }
         if (getSorllT + clientH >= maxT) {
-            $('form').css("position", "relative");
+            $('.filter-sub-navlist').css("position", "relative");
         }
         var judgeFlag = $('.now-pages>.pages>.curr').text();
         var hascount = $('.goods-container .goods-head>a>img').length;
@@ -197,12 +197,12 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     $('.goods-container').on('click', '.collect', function () {
         if (localStorage.getItem('uphone')) {
             var _setFlag = 0;
-            if(localStorage.getItem(`${localStorage.getItem('uphone')}collect`)){
+            if (localStorage.getItem(`${localStorage.getItem('uphone')}collect`)) {
                 var comfireData = localStorage.getItem(`${localStorage.getItem('uphone')}collect`);
                 comfireData = JSON.parse(comfireData);
-                for(let item of comfireData){
+                for (let item of comfireData) {
                     console.log(comfireData)
-                    if(item["shopUrl"] == $(this).parent().prev().children().eq(0).children().eq(0).attr("src")){
+                    if (item["shopUrl"] == $(this).parent().prev().children().eq(0).children().eq(0).attr("src")) {
                         _setFlag = 1;
                     }
                 }
@@ -223,10 +223,10 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
                 var collectArr = collectHolder;
             }
             collectArr = JSON.stringify(collectArr);
-            if(!_setFlag){
+            if (!_setFlag) {
                 localStorage.setItem(`${localStorage.getItem('uphone')}collect`, collectArr);
             }
-            
+
 
             $(this).addClass('hobby');
             // 出现收藏提示框

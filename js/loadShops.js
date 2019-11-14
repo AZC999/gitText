@@ -3,12 +3,9 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
     return function (shops, count, hascount) {
         var shopscount = shops.length;
         var _code = null;
-        $('.res').text(shopscount);
         if(!shopscount){
             count = 0;
         }
-        $('.page-sum>span').eq(0).text(Math.ceil((hascount + count) / 20));
-        $('.page-sum>span').eq(1).text(Math.ceil(shopscount / 20));
         if(!shopscount){
             $('.goods-container').text("抱歉！暂无此类商品。。。");
             return;
@@ -19,6 +16,9 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
             shopscount--;
             holdcount++;
         }
+        $('.page-sum>span').eq(0).text(Math.ceil((hascount + count) / 20));
+        $('.page-sum>span').eq(1).text(Math.ceil(shopscount / 20));
+        $('.res').text(shopscount);
         var sum = holdcount + count;
         for (let i = holdcount; i < sum; i++) {
             if (i >= shops.length) {
