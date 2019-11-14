@@ -1,29 +1,23 @@
 <?php
-    //账号密码登录页
+    //手机号快捷登录页
     header("Content-Type:text/html;charset=utf-8");
-    
-    $uphone = $_POST['uphone'];
 
-    $upwd = $_POST['upwd'];
+    $uphone = $_GET['uphone'];
 
     $conn = mysqli_connect('localhost','root','');
-    
+
     mysqli_select_db($conn,"studentysy");
 
     mysqli_query($conn,"set names utf8");
 
     $sql = "select * from user where uphone = '$uphone'";
-
+    
     $row = mysqli_query($conn,$sql);
 
     $arr = mysqli_fetch_array($row);
 
     if($arr){
-        if($arr['upwd'] === $upwd){
-            echo 1;
-        }else{
-            echo 0;
-        }
+        echo 1;
     }else{
         echo 0;
     }

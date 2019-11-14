@@ -78,16 +78,20 @@
         <div class="banner-data">
             <div class="banner-data-box">
                <div class="banner-data-box-one clearfix">
-                   <a class="style" href="#">帐户密码登录</a>
-                   <a href="#">手机号快捷登录</a>
+                   <a class="common style" href="#">帐户密码登录</a>
+                   <a class="shortcut" href="#">手机号快捷登录</a>
                </div>
                <div class="banner-data-box-two">
                    <form>
                         <dl>
                             <dd>
-                                <div>
+                                <div class="account-one border">
                                     <i class="bgd"></i>
                                     <input type="text" class="txt" placeholder="手机号/会员名称/邮箱">
+                                </div>
+                                <div class="account-two border">
+                                    <label class="label">手机号</label>
+                                    <input type="text" class="pop" placeholder="请输入您的手机号码">
                                 </div>
                             </dd>
                             <dt>
@@ -95,17 +99,26 @@
                             </dt>
                         </dl>
                         <dl>
-                            <dd>
-                                <div>
+                            <dd class="frame clearfix">
+                                <div class="frame-box border">
                                     <i class="bgd"></i>
                                     <input type="password" class="pwd" placeholder="请输入密码">
+                                </div>
+                                <div class="frame-left">
+                                    <label class="label">短信验证码</label>
+                                    <input type="text" class="uxu">
+                                </div>
+                                <div class="frame-right">
+                                    <a class="hq" href="javascript:;">
+                                        <span>获取验证码</span>
+                                    </a>
                                 </div>
                             </dd>
                             <dt>
                                 <div></div>
                             </dt>
                         </dl>
-                        <p>
+                        <p class="forget-the-password">
                             <a href="">忘记密码？</a>
                         </p>
                         <p>
@@ -133,5 +146,3 @@
     </div>
 </body>
 </html>
-<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
-<script src="./../js/login.js"></script>
