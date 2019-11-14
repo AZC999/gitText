@@ -174,7 +174,7 @@ overflow: hidden;
 }
 .uc_tab a{
     display: inline-block;
-    width: 140px;
+    width: 108px;
     height: 34px;
     line-height: 34px;
     border: 1px solid #efefef;
@@ -238,4 +238,88 @@ overflow: hidden;
     display: block;
     clear: both;
     overflow: hidden;
+}
+.s_h{
+    display: block;
+    float: left;
+    width: 23px;
+    padding-left: 5px;
+    margin-top: 7px;
+    overflow: hidden;
+    height: 34.8px;
+}
+.bgd{
+    background: url(./../img/uc_ico.png) no-repeat;
+}
+.s_h>a{
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -99px;
+    overflow: hidden;
+    background-position: -32px 0;
+}
+.s_h>input{
+    position: relative;
+    right: 2px;
+    top: 3px;
+    margin: 3px 3px 3px 4px;
+    font-size: 12px;
+}
+.pro_img{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    padding: 1px;
+    margin-top: 4px;
+    overflow: hidden;
+    float: left;
+}
+.fav_pro_c{
+    display: block;
+    float: left;
+    width: 712px;
+}
+.fav_pro_c .pro_info{
+    display: block;
+    float: left;
+    width: 320px;
+    padding: 0 6px;
+    overflow: hidden;
+}
+.fav_pro_c .pro_info>p>.cgray{
+    color: #a9a9a9;
+}
+.fav_pro_c .pro_info>p>.cgray>.f_gray{
+    color: #666;
+}
+.fav_pro_c .price_cs{
+    display: block;
+    float: left;
+    width: 195px;
+}
+.fav_pro_c .price_cs>p{
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    font-family: arial,'Microsoft YaHei';
+}
+.fav_pro_c .cz{
+    display: block;
+    float: left;
+    width: 170px;
+    padding-left: 12px;
+    text-align: center;
+}
+.fav_pro_c .cz>.cz1>a{
+    display: inline-block;
+    padding: 2px 13px;
+    background: #333;
+    color: #fff;
+}
+.fav_pro_c .cz>.cz3>a{
+    color: #333;
 }
