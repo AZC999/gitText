@@ -267,12 +267,13 @@
 }
 
 .sub-wrap .sub-goods-list>ul>li .goods-desc .nptt {
+    height: 46px;
     overflow: hidden;
     color: #aaa;
     line-height: 1.8;
     display: block;
     text-align: center;
-
+    text-overflow: ellipsis;
 }
 
 .sub-wrap .sub-goods-list>ul>li .goods-desc {
@@ -357,4 +358,17 @@
 }
 .arrow-down{
     background: url(../img/arrow_down.png) no-repeat 65px 20px;
+}
+
+.goods-desc em.collect {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 22px;
+    width: 19px;
+    height: 19px;
+    background: url(../img/css_sprites.png) -10px -104px;
+}
+.goods-container>li:hover .goods-desc em.collect{
+    display: block;
 }
