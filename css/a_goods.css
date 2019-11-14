@@ -304,9 +304,10 @@ margin-bottom: 30px;
 display: flex;
 justify-content: space-around;
 margin-bottom: 30px;}
-.a_downvideo video{margin: 0 auto;
+/* .a_downvideo video{margin: 0 auto;
 object-fit:fill;
-}
+} */
+#videoA{object-fit:fill;}
 #content{display: flex;
 justify-content: space-around;
 width: 1150px;
@@ -380,9 +381,9 @@ max-width: 100%;
 height: auto;
 }
 .a_vio{display: flex;
-justify-content: space-around;}
-.a_vio .video {object-fit:fill;
-
-}
-.a_vio .video1{object-fit:fill;}
+justify-content: space-around;
+padding-top: 120px;
+box-sizing: border-box;}
+#videoB{background-color: #000000;}
 .a_vio img:hover{opacity: 0.5;}
+.a_pho{margin: 0 auto;}

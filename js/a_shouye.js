@@ -14,14 +14,23 @@
     }
   }
  </script>
- <script type="text/javascript">   
-     var video1=document.getElementById("videoPlay1");
-     video1.onclick=function(){
-         video1.controls=true;
-         if(video1.paused){
-             video1.play();
-         }else{
-             video1.pause();
-         }
-     }
+ <script>
+ 	var yaoVideo = document.getElementById("videoA")
+ 	
+ 	function play(){
+ 		if (yaoVideo.paused)
+ 		yaoVideo.play()
+ 		else
+ 		yaoVideo.pause()
+ 	}
+ </script>
+ <script>
+ 	var yaoVideo1 = document.getElementById("videoB")
+ 	
+ 	function play(){
+ 		if (yaoVideo.paused)
+ 		yaoVideo.play()
+ 		else
+ 		yaoVideo.pause()
+ 	}
  </script>

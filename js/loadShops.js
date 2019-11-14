@@ -32,7 +32,7 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
             newImg.src = shops[i]['shopUrl'];
             newImg['index-data'] = holdcount == hascount ? i % 20 : i % 20 - 1;
             var newGoods = `<li _setCode=${_code}>
-                            <div class="goods-head"><a href="#"><img src="../img/loadingShop.gif" alt=""></a></div><div class="goods-desc"><a href="#" ><span class="nptt">${shops[i]['shopBrand']}${shops[i]['shopDescrip']}</span></a><p><em class="now-price">¥<i>${shops[i]['shopNowPrice']}</i></em><span class="origin-price">¥<i>${shops[i]['shopOriginPrice']}</i></span></p></div></li>`;
+                            <div class="goods-head"><a href="#"><img src="../img/loadingShop.gif" alt=""></a></div><div class="goods-desc"><a href="#" ><span class="nptt">${shops[i]['shopBrand']}${shops[i]['shopDescrip']}</span></a><p><em class="now-price">¥<i>${shops[i]['shopNowPrice']}</i></em><span class="origin-price">¥<i>${shops[i]['shopOriginPrice']}</i></span></p>  <em class="collect" ></em>  </div></li>`;
             $('.goods-container').append(newGoods);
             newImg.onload = function () {
                 $('.goods-container .goods-head>a>img').eq(this['index-data']).attr('src', this.src);

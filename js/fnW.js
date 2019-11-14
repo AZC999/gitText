@@ -185,12 +185,22 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
             shopsAjax = priceShopsHolder;
             $('.goods-container').empty();
             loadShops(shopsAjax, 16, $('.goods-container .goods-head>a>img').length);
-            // loadPages(shopsAjax);
         }
     })
 
     // 设置 localStorage 详情页获取 shopCode
     $('.goods-container').on('click', 'li', function () {
         localStorage.setItem("shopCode", $(this).attr('_setCode'));
+    })
+
+    // 给收藏数据
+    $('.goods-container').on('click','.collect',function(){
+        if(localStorage.getItem('uphone')){
+            location.href = "./collect.html";
+            localStorage.setItem("shops",'');
+        } else {
+            alert('请先登录您的账号！');
+            location.href = "./register.html";
+        }  
     })
 });
