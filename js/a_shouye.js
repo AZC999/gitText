@@ -2,7 +2,13 @@
 window.onscroll = function (){
 	var topContent = head.offsetHeight + logo.offsetHeight;
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 获取滚动高度
+=======
+<<<<<<< HEAD
+window.onscroll = function (){
+	var topContent = head.offsetHeight + logo.offsetHeight;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 获取滚动高度
     console.log(scrollTop, topContent.offsetHeight);
+>>>>>>> d6e3b7e2cde82419218570b3aa2444d11a9de766
     if(scrollTop >= topContent.offsetHeight) { // 滚动高度 > 头部内容高度
     	a2_nav.style.display = 'block';
      	a2_nav.style.top = 0;
@@ -26,6 +32,8 @@ function play(){
  	else
  	yaoVideo.pause()
 }
+<<<<<<< HEAD
+=======
 =======
 
 <script>
@@ -64,3 +72,4 @@ function play(){
  	}
  </script>
 >>>>>>> 43193218d6ec2966f9a73ec3b6e874a6ac338443
+>>>>>>> d6e3b7e2cde82419218570b3aa2444d11a9de766

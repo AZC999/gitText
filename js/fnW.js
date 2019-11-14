@@ -197,15 +197,26 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     // 给收藏数据
     $('.goods-container').on('click', '.collect', function () {
         if (localStorage.getItem('uphone')) {
-
+            var _setFlag = 0;
             if(localStorage.getItem(`${localStorage.getItem('uphone')}collect`)){
+                var comfireData = localStorage.getItem(`${localStorage.getItem('uphone')}collect`);
+                comfireData = JSON.parse(comfireData);
+                for(let item of comfireData){
+                    console.log(comfireData)
+                    if(item["shopUrl"] == $(this).parent().prev().children().eq(0).children().eq(0).attr("src")){
+                        _setFlag = 1;
+                    }
+                }
+            }
+
+            if (localStorage.getItem(`${localStorage.getItem('uphone')}collect`)) {
                 var collectHolder = `{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}`;
             } else {
                 var collectHolder = `[{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}]`;
             }
             collectHolder = JSON.parse(collectHolder);
 
-            if(localStorage.getItem(`${localStorage.getItem('uphone')}collect`)){
+            if (localStorage.getItem(`${localStorage.getItem('uphone')}collect`)) {
                 var collectArr = localStorage.getItem(`${localStorage.getItem('uphone')}collect`);
                 collectArr = JSON.parse(localStorage.getItem(`${localStorage.getItem('uphone')}collect`));
                 collectArr.push(collectHolder);
@@ -213,7 +224,10 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
                 var collectArr = collectHolder;
             }
             collectArr = JSON.stringify(collectArr);
-            localStorage.setItem(`${localStorage.getItem('uphone')}collect`, collectArr);
+            if(!_setFlag){
+                localStorage.setItem(`${localStorage.getItem('uphone')}collect`, collectArr);
+            }
+            
 
             $(this).addClass('hobby');
             // 出现收藏提示框
@@ -230,7 +244,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
             }, 1000)
         } else {
             alert('请先登录您的账号！');
-            location.href = "./register.html";
+            location.href = "./login.html";
         }
     })
     // 关闭收藏框
