@@ -222,6 +222,22 @@ body{
     display: block;
     clear: both;
     overflow: hidden;
+    color: #333;
+}
+.paginator-p{
+    padding-left: 12px;
+    float: left;
+    display: none;
+}
+.paginator-p>a{
+    color: #333;
+}
+.paginator-p>input{
+    vertical-align: middle;
+}
+.ad{
+    float: left;
+    display: none;
 }
 .s_h{
     display: block;
@@ -251,7 +267,7 @@ body{
     font-size: 12px;
 }
 .pro_img{
-    display: inline-block;
+    display: block;
     width: 60px;
     height: 60px;
     border: 1px solid #ddd;
