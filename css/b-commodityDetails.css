@@ -1,0 +1,400 @@
+.main{
+width: 1190px;
+height: 60px;
+margin: 0 auto;
+margin-top: 50px;
+}
+.main a{
+    color: #000;
+}
+.good{
+    width: 1190px;
+    height: 747px;
+    margin: 0 auto;
+   
+}
+.goodImg{
+   
+    width: 605px;
+    height: 605px;
+    float: left;
+}
+.goodImg-left{
+    float: left;
+}
+.goodImg-left ul{
+    width: 75px;
+    height: 497px;
+}
+.goodImg-left ul li{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #cccccc;
+    margin-top:10px;
+}
+.item:hover{
+border:1px solid #333;
+}
+.goodImg-right{
+    width: 482px;
+    height: 482px;
+    float: right;
+    position: relative;
+    margin-right: 20px;
+}
+.goodImg-right img{
+    width: 482px;
+    height: 479px;
+}
+.mask{
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ccc;
+    opacity: 0.4;
+    cursor: move;
+    display: none;
+}
+.right{
+    display: none;
+    width: 485px;
+    height: 485px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+.right img{
+    max-width: 1000px !important;
+    display: block;
+    position: absolute;
+}
+ .shopping-conttainer{
+    position: relative;
+     width: 585px;
+     height: 643px;
+     float: right;
+ }
+ .brand-logo{
+     width: 144px;
+     height: 74px;
+     border: 1px solid #cccccc;
+     margin-bottom: 30px;
+ }
+ .brand-logo img{
+     width: 112px;
+     height: 52px;
+     margin-left: 15px;
+     margin-top: 10px;
+ }
+ h1{
+     font-size: 16px;
+     font-weight:normal
+ }
+ .shopping-price{
+     width: 528px;
+     height: 45px;
+     margin-top: 50px;
+ }
+ .shopping-price span{
+     font-size: 14px;
+     font-weight:bold;
+ }
+ .shopping-price span i{
+     font-size: 30px;
+ }
+ .shopping-box{
+     width: 528px;
+     height: 0;
+     border-bottom: 1px dotted #a7a7a7;
+     margin-top: 60px;
+ }
+ .buy{
+     width: 528px;
+     height: 298px;
+     margin-top: 20px;
+ }
+ .color{
+     width: 528px;
+     height: 49px;
+ }
+ .color .attrib a img{
+    border: 1px solid #cccccc;
+ }
+ .two{
+     border:2px solid #333;
+ }
+ .attrib a{
+    cursor: pointer;
+    display: inline-block;
+ }
+ .attrib a img:hover{
+     border: 1px solid #333;
+ }
+ .size{
+     width: 528px;
+     height: 64px;
+     margin-top: 35px;
+ }
+ .size .prodSpec a{
+    border: 1px solid #ccc;
+    min-width: 40px;
+    width: 40px;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 4px 0 4px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    cursor: pointer;
+ }
+ .one{
+     background: #000;
+     color: #fff;
+ }
+ .size .prodSpec a:hover{
+    border: 1px solid #333;
+ }
+ .size-contrast a{
+     color: #000;
+ }
+.count-clearfixed{
+    width: 528px;
+    height: 37px;
+    margin-top: 25px;
+    display: block;
+}
+.count-clearfixed span{
+    height: 30px;
+   float: left;
+   line-height: 30px;
+   margin-right: 10px;
+}
+.input-content{
+    width: 95px;
+    height: 30px;
+    float: left;
+}
+.input-content input{
+    width: 60px;
+    height: 28px;
+    font-size: 14px;
+    color: #666;
+    vertical-align: middle
+}
+.dianji{
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+    float: right;
+}
+.dianji ul li:hover{
+    opacity: 0.5;
+}
+.buttons{
+    float: left;
+    margin-left: 4px;
+    padding-top: 3px;
+}
+.buttons a {
+    display: block;
+    width: 18px;
+    height: 14px;
+    margin-bottom: 3px;
+}
+.qbuy{
+    margin-top: 30px;
+}
+
+.qbuy ul li{
+    float:left;
+    margin-right: 20px;
+}
+.qbuy ul li .yg-button-buy{
+    width: 222px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 20px;
+    color: #fff;
+    background: #333;
+    display: inline-block;
+    text-align: center
+}
+.qbuy ul li .yg-button-active{
+    width: 222px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 20px;
+    color: #333;
+    border: 1px solid #333;
+    display: inline-block;
+    text-align: center
+}
+.share {
+    margin-top: 30px;
+    
+}
+.share_goods_new {
+    height: 30px;
+   
+}
+.share .good_sc {
+    float: left;
+}
+.share .good_sc a {
+    color: #333;
+    display: inline-block;
+    height: 30px;
+    line-height: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.share_goods_new .bds_tools {
+    height: 14px;
+    line-height: inherit;
+}
+.share_goods_new .bds_tools .bds_more {
+    float: left;
+    cursor: pointer;
+    line-height: 15px!important;
+    margin-right: 20px!important;
+    padding-left: 8px!important;
+    margin-top: 0;
+    color: #333;
+}
+
+.share-1{
+    width: 153px;
+    height: 156px;
+    float: right;
+    margin-right: 110px;
+    text-align:center
+}
+.share-1 img{
+    width: 120px;
+    height: 120px;
+    
+}
+.share-1 span{
+    color: #666;
+    line-height: 24px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* 商品详情 */
+.product-info-wrapper {
+   
+    width: 1190px;
+    margin: 0 auto;
+}
+.info-title{
+    margin-top: 80px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-weight: 400;
+}
+.product-info-wrapper .content {
+    margin-top: 40px;
+    font: 12px/1.5 tahoma,'Microsoft YaHei';
+    color: #666;
+}
+
+/* 尺码 */
+.spec-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+   
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.spec-table tr {
+    border-bottom: 1px solid #eee;
+}
+.spec-table tr td{
+    line-height: 80px;
+    text-align: left;
+    font-size: 12px;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.size-wrapper {
+    margin-top: 120px;
+    width: 1190px;
+    margin: 0 auto;
+}
+.size-title{
+    margin-top: 120px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-weight: 400;
+}
+.size-wrapper>.content {
+    margin-top: 47px;
+}
+
+/* 商品详情 */
+.desc-wrapper {
+    width: 1190px;
+    margin: 0 auto;
+}
+.desc-wrapper .desc-title{
+    margin-top: 120px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    font-weight: 400;
+}
+#contentDetail {
+    width: 740px;
+    margin-top: 40px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 14px;
+    line-height: 26px;
+}
+#contentDetail p {
+    color: #666;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+#contentDetail p {
+    color: #666;
+    font-size: 14px;
+    line-height: 26px;
+}
+#contentDetail img {
+    display: block;
+    border: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 26px;
+}
+/* 品牌介绍 */
+.brand-brief {
+    width: 990px;
+    margin: 0 auto;
+    text-align: center;
+    text-align-last: left;
+    margin-top: 140px;
+}
+.brand-brief p {
+    color: #333;
+}
