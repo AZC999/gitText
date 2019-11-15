@@ -1,0 +1,164 @@
+[
+    {
+        "shopCode": "shop5",
+        "shopCUrl": [
+            "color1",
+            "../img/yy_10002 (9).jpg"
+        ],
+        "shopTUrl": [
+            "../img/yy_10002 (2).jpg",
+            "../img/yy_10002 (3).jpg",
+            "../img/yy_10002 (4).jpg",
+            "../img/yy_10002 (5).jpg",
+            "../img/yy_10002 (6).jpg",
+            "../img/yy_10002 (7).jpg",
+            "../img/yy_10002 (8).jpg"
+        ],
+        "shopMUrl": [
+            "../img/yy_10002 (1).jpg",
+            "../img/yy_10002 (11).jpg",
+            "../img/yy_10002 (13).jpg",
+            "../img/yy_10002 (15).jpg",
+            "../img/yy_10002 (17).jpg",
+            "../img/yy_10002 (19).jpg",
+            "../img/yy_10002 (21).jpg"
+        ],
+        "shopLUrl": [
+            "../img/yy_10002 (10).jpg",
+            "../img/yy_10002 (12).jpg",
+            "../img/yy_10002 (14).jpg",
+            "../img/yy_10002 (16).jpg",
+            "../img/yy_10002 (18).jpg",
+            "../img/yy_10002 (20).jpg",
+            "../img/yy_10002 (22).jpg"
+        ],
+        "shopLogo": "../yy_10002 (23).png",
+        "shopTitle": "Nike耐克2019年新款男子NIKE AIR MAX OKETO复刻鞋AQ2235-002",
+        "shopBrand": "Joy&Peace",
+        "shopPrice": "399",
+        "originPrice": "599"
+    },
+
+    {
+        "shopCode": "shop5",
+        "shopCUrl": [
+            "color2",
+            "../img/ya_10002 (9).jpg"
+        ],
+        "shopTUrl": [
+            "../img/ya_10002 (2).jpg",
+            "../img/ya_10002 (3).jpg",
+            "../img/ya_10002 (4).jpg",
+            "../img/ya_10002 (5).jpg",
+            "../img/ya_10002 (6).jpg",
+            "../img/ya_10002 (7).jpg",
+            "../img/ya_10002 (8).jpg"
+        ],
+        "shopMUrl": [
+            "../img/ya_10002 (1).jpg",
+            "../img/ya_10002 (11).jpg",
+            "../img/ya_10002 (13).jpg",
+            "../img/ya_10002 (15).jpg",
+            "../img/ya_10002 (17).jpg",
+            "../img/ya_10002 (19).jpg",
+            "../img/ya_10002 (21).jpg"
+        ],
+        "shopLUrl": [
+            "../img/ya_10002 (10).jpg",
+            "../img/ya_10002 (12).jpg",
+            "../img/ya_10002 (14).jpg",
+            "../img/ya_10002 (16).jpg",
+            "../img/ya_10002 (18).jpg",
+            "../img/ya_10002 (20).jpg",
+            "../img/ya_10002 (22).jpg"
+        ],
+        "shopLogo":  "../yy_10002 (23).png",
+        "shopTitle": "Nike耐克2019年新款男子NIKE AIR MAX OKETO复刻鞋AQ2235-002",
+        "shopBrand": "Joy&Peace",
+        "shopPrice": "399",
+        "originPrice": "599"
+    },
+
+
+    {
+        "shopCode": "shop6",
+        "shopCUrl": [
+            "color1",
+            "../img/ww_10002 (9).jpg"
+        ],
+        "shopTUrl": [
+            "../img/ww_10002 (2).jpg",
+            "../img/ww_10002 (3).jpg",
+            "../img/ww_10002 (4).jpg",
+            "../img/ww_10002 (5).jpg",
+            "../img/ww_10002 (6).jpg",
+            "../img/ww_10002 (7).jpg",
+            "../img/ww_10002 (8).jpg"
+        ],
+        "shopMUrl": [
+            "../img/ww_10002 (1).jpg",
+            "../img/ww_10002 (11).jpg",
+            "../img/ww_10002 (12).jpg",
+            "../img/ww_10002 (15).jpg",
+            "../img/ww_10002 (18).jpg",
+            "../img/ww_10002 (16).jpg",
+            "../img/ww_10002 (17).jpg"
+        ],
+        "shopLUrl": [
+            "../img/ww_10002 (10).jpg",
+            "../img/ww_10002 (13).jpg",
+            "../img/ww_10002 (14).jpg",
+            "../img/ww_10002 (20).jpg",
+            "../img/ww_10002 (19).jpg",
+            "../img/ww_10002 (21).jpg",
+            "../img/ww_10002 (22).jpg"
+        ],
+        "shopLogo": "../img/ww_10002 (23).png",
+        "shopTitle": "adidas阿迪达斯2019男子E 3S CREW FT针织套衫DU0484",
+        "shopBrand": "Joy&Peace",
+        "shopPrice": "199",
+        "originPrice": "369"
+    },
+    
+    {
+        "shopCode": "shop6",
+        "shopCUrl": [
+            "color2",
+            "../img/wm_10002 (9).jpg"
+        ],
+        "shopTUrl": [
+            "../img/wm_10002 (2).jpg",
+            "../img/wm_10002 (3).jpg",
+            "../img/wm_10002 (4).jpg",
+            "../img/wm_10002 (5).jpg",
+            "../img/wm_10002 (6).jpg",
+            "../img/wm_10002 (7).jpg",
+            "../img/wm_10002 (8).jpg"
+        ],
+        "shopMUrl": [
+            "../img/wm_10002 (1).jpg",
+            "../img/wm_10002 (11).jpg",
+            "../img/wm_10002 (12).jpg",
+            "../img/wm_10002 (14).jpg",
+            "../img/wm_10002 (16).jpg",
+            "../img/wm_10002 (19).jpg",
+            "../img/wm_10002 (20).jpg"
+        ],
+        "shopLUrl": [
+            "../img/wm_10002 (10).jpg",
+            "../img/wm_10002 (13).jpg",
+            "../img/wm_10002 (15).jpg",
+            "../img/wm_10002 (17).jpg",
+            "../img/wm_10002 (18).jpg",
+            "../img/wm_10002 (21).jpg",
+            "../img/wm_10002 (22).jpg"
+        ],
+        "shopLogo":"../img/ww_10002 (23).png",
+        "shopTitle": "adidas阿迪达斯2019男子E 3S CREW FT针织套衫DU0484",
+        "shopBrand": "Joy&Peace",
+        "shopPrice": "199",
+        "originPrice": "369"
+    }
+
+
+]
