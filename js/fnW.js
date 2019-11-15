@@ -2,6 +2,7 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     var shopsAjax; //储存请求过来的商品数据
     var priceShopsHolder;
     var getdistance;
+    var timer = null;
 
     // list 展开与收起
     $('.filter-list-wrap').on("click", "li>p", function () {
@@ -69,18 +70,18 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
         var getSorllT = document.documentElement.scrollTop || document.body.scrollTop;
         var clientH = document.documentElement.clientHeight || document.body.clientHeight;
         var maxT = $('.footer').get(0).offsetTop;
-
+        $('.filter-sub-navlist').css("top", "0px");
         if (!getdistance) {
-            getdistance = $('form').get(0).offsetTop;
+            getdistance = $('.filter-sub-navlist').get(0).offsetTop;
         }
         if (getdistance <= getSorllT) {
-            $('form').css("position", "fixed");
-            $('form').css("top", "0");
+            $('.filter-sub-navlist').css("position", "fixed");
+            $('.filter-sub-navlist').css("top", "60px");
         } else {
-            $('form').css("position", "relative");
+            $('.filter-sub-navlist').css("position", "relative");
         }
         if (getSorllT + clientH >= maxT) {
-            $('form').css("position", "relative");
+            $('.filter-sub-navlist').css("position", "relative");
         }
         var judgeFlag = $('.now-pages>.pages>.curr').text();
         var hascount = $('.goods-container .goods-head>a>img').length;
@@ -194,13 +195,65 @@ define(['jquery', "judgePage", "loadPage", "loadShop", "loadListItem", "activePa
     })
 
     // 给收藏数据
-    $('.goods-container').on('click','.collect',function(){
-        if(localStorage.getItem('uphone')){
-            location.href = "./collect.html";
-            localStorage.setItem("shops",'');
+    $('.goods-container').on('click', '.collect', function () {
+        if (localStorage.getItem('uphone')) {
+            var _setFlag = 0;
+            if(localStorage.getItem(`${localStorage.getItem('uphone')}collect`)){
+                var comfireData = localStorage.getItem(`${localStorage.getItem('uphone')}collect`);
+                comfireData = JSON.parse(comfireData);
+                for(let item of comfireData){
+                    console.log(comfireData)
+                    if(item["shopUrl"] == $(this).parent().prev().children().eq(0).children().eq(0).attr("src")){
+                        _setFlag = 1;
+                    }
+                }
+            }
+
+            if (localStorage.getItem(`${localStorage.getItem('uphone')}collect`)) {
+                var collectHolder = `{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}`;
+            } else {
+                var collectHolder = `[{"shopUrl":"${$(this).parent().prev().children().eq(0).children().eq(0).attr("src")}","shopTitle":"${$(this).prev().prev().children().eq(0).text()}","shopPrice":"${$(this).prev().children().eq(0).children().eq(0).text()}","shopSize":"1","shopColor":"绿色"}]`;
+            }
+            collectHolder = JSON.parse(collectHolder);
+
+            if (localStorage.getItem(`${localStorage.getItem('uphone')}collect`)) {
+                var collectArr = localStorage.getItem(`${localStorage.getItem('uphone')}collect`);
+                collectArr = JSON.parse(localStorage.getItem(`${localStorage.getItem('uphone')}collect`));
+                collectArr.push(collectHolder);
+            } else {
+                var collectArr = collectHolder;
+            }
+            collectArr = JSON.stringify(collectArr);
+            if(!_setFlag){
+                localStorage.setItem(`${localStorage.getItem('uphone')}collect`, collectArr);
+            }
+            
+
+            $(this).addClass('hobby');
+            // 出现收藏提示框
+            $('.mask').show();
+            var flag = 10;
+            $('.timeCount').text(`倒计时${flag}秒后自动关闭`);
+            timer = setInterval(function () {
+                flag--;
+                $('.timeCount').text(`倒计时${flag}秒后自动关闭`);
+                if (flag <= 0) {
+                    $('.mask').hide();
+                    clearInterval(timer);
+                }
+            }, 1000)
         } else {
             alert('请先登录您的账号！');
-            location.href = "./register.html";
-        }  
+            location.href = "./login.html";
+        }
     })
+    // 关闭收藏框
+    $('.close').click(function () {
+        $('.mask').hide();
+        clearInterval(timer);
+    })
+    // 设置收藏框大小
+    $('.mask').css('width', $(document).width());
+    $('.mask').css('height', $(document).height());
+    
 });
