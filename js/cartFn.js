@@ -1,10 +1,10 @@
 define(["jquery", "countPrice"], function ($, countPrice) {
-    // localStorage.setItem("shops", `[{"url":"../img/101001660_01_t.jpg","descrip":"Joy&Peace/真美诗2018冬季新款羊绒皮尖头粗跟短筒女皮靴YPK28DD8","color":"黑色","size":"34","price":"678","count":"2"},{"url":"../img/101001660_01_t.jpg","descrip":"Joy&Peace/真美诗2018冬季新款羊绒皮尖头粗跟短筒女皮靴YPK28DD8","color":"黑色","size":"34","price":"678","count":"2"}]`)
+    // localStorage.setItem("shops", `[{"url":"../img/101001660_01_t.jpg","descrip":"Joy&Peace/真美诗2018冬季新款羊绒皮尖头粗跟短筒女皮靴YPK28DD8","color":"黑色","size":"34","price":"678","count":"2"}]`)
     var getShop;
-    if(localStorage.getItem("shops")){
+    if (localStorage.getItem("shops")) {
         getShop = JSON.parse(localStorage.getItem("shops"));
     }
-    
+
     // 判断是否有商品加入购物车
     if (getShop) {
         // 如果有
@@ -12,7 +12,7 @@ define(["jquery", "countPrice"], function ($, countPrice) {
         for (let i = 0; i < getShop.length; i++) {
             // 创建新的商品tr
             var newShop = `<tr>
-            <td colspan="7"><div class="shopping_cart_tr clearfix"><div class="shpcrt_blank10"></div><dl class="clearfix"><dd class="col_chkbox"><input class="sel" type="checkbox" name="" id="" checked></dd><dt class="col_1"><a href="#"><img src="../img/${getShop[i].url}" alt=""></a></dt><dd class="col_2"><a href="#"><div>${getShop[i].descrip}</div></a></dd><dd class="col_3"><div class="pl20"><p>颜色：<em>${getShop[i].color}</em></p><p>尺码：<em>${getShop[i].size}</em></p></div></dd><dd class="col_4">${getShop[i].price}</dd><dd class="col_5"><a class="goodsSub" href="#">-</a><input class="goodsTxt" type="text" value="${getShop[i].count}" name="" id=""><a class="goodsPlus" href="#">+</a></dd><dd class="col_6">${Number(getShop[i].price) * Number(getShop[i].count)}</dd><dd class="col_7"><a href="javascript:;">移入收藏夹</a><br><a class="del" href="javascript:;">删除</a></dd></dl><div class="shpcrt_blank10"></div></div></td></tr>`
+            <td colspan="7"><div class="shopping_cart_tr clearfix"><div class="shpcrt_blank10"></div><dl class="clearfix"><dd class="col_chkbox"><input class="sel" type="checkbox" name="" id="" checked></dd><dt class="col_1"><a href="#"><img src="${getShop[i].url}" alt=""></a></dt><dd class="col_2"><a href="#"><div>${getShop[i].descrip}</div></a></dd><dd class="col_3"><div class="pl20"><p>颜色：<em>${getShop[i].color}</em></p><p>尺码：<em>${getShop[i].size}</em></p></div></dd><dd class="col_4">${getShop[i].price}</dd><dd class="col_5"><a class="goodsSub" href="#">-</a><input class="goodsTxt" type="text" value="${getShop[i].count}" name="" id=""><a class="goodsPlus" href="#">+</a></dd><dd class="col_6">${Number(getShop[i].price) * Number(getShop[i].count)}</dd><dd class="col_7"><a href="javascript:;">移入收藏夹</a><br><a class="del" href="javascript:;">删除</a></dd></dl><div class="shpcrt_blank10"></div></div></td></tr>`
 
             $('tbody').append(newShop);
         }
@@ -73,6 +73,7 @@ define(["jquery", "countPrice"], function ($, countPrice) {
     $('.goodsPlus').click(function () {
         var getCount = $(this).parent().children().eq(1).val();
         getCount++;
+        getCount = getCount >= 20 ? 20 : getCount;
         $(this).parent().children().eq(1).get(0).value = getCount;
         // 重新计算价格
         countPrice($(this));
@@ -87,32 +88,32 @@ define(["jquery", "countPrice"], function ($, countPrice) {
     })
 
     // 给选择添加事件
-    $('.sel').click(function(){
+    $('.sel').click(function () {
         // 判断是否全选
-        var flag=0;
-        for(var i=0;i<$('.sel').length;i++){
-            if($('.sel').eq(i).attr("checked")){
+        var flag = 0;
+        for (var i = 0; i < $('.sel').length; i++) {
+            if ($('.sel').eq(i).attr("checked")) {
                 flag++;
             }
         }
-        if(flag == $('.sel').length){
-            $('.allsel').attr("checked",true);
+        if (flag == $('.sel').length) {
+            $('.allsel').attr("checked", true);
         } else {
-            $('.allsel').attr("checked",false);
+            $('.allsel').attr("checked", false);
         }
         // 重新计算总价
         countPrice();
     })
 
     // 结算
-    $('.cart_b_paybtn').click(function(){
-        if(localStorage.getItem('uphone')){
+    $('.cart_b_paybtn').click(function () {
+        if (localStorage.getItem('uphone')) {
             alert('醒醒吧，你哪来的钱？');
-            localStorage.setItem("shops",'');
+            localStorage.setItem("shops", '');
             location.reload();
         } else {
             alert('请先登录您的账号！');
             location.href = "./register.html";
-        }  
+        }
     })
 });

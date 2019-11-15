@@ -3,11 +3,14 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
     return function (shops, count, hascount) {
         var shopscount = shops.length;
         var _code = null;
-        if(!shopscount){
+        if (!shopscount) {
             count = 0;
         }
-        if(!shopscount){
+        if (!shopscount) {
             $('.goods-container').text("抱歉！暂无此类商品。。。");
+            $('.res').text(shopscount);
+            $('.page-sum>span').eq(0).text(Math.ceil((hascount + count) / 20));
+            $('.page-sum>span').eq(1).text(Math.ceil(shopscount / 20));
             return;
         }
         var holdcount = hascount;
@@ -25,7 +28,7 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
                 // count = i;
                 break;
             }
-            if(shops[i]["_setCode"]){
+            if (shops[i]["_setCode"]) {
                 _code = shops[i]["_setCode"];
             }
             var newImg = new Image();
@@ -38,6 +41,6 @@ define(["jquery", "loadBrand"], function ($, loadBrand) {
                 $('.goods-container .goods-head>a>img').eq(this['index-data']).attr('src', this.src);
             }
         }
-        
+
     }
 });

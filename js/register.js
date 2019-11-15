@@ -129,6 +129,7 @@ $(function(){
         }
     }
     $('.captcha').click(function(){
+        dxd('.dxd');
         if(flag_1 && flag_2){
             hq(this);
         }else{

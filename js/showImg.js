@@ -8,6 +8,15 @@ $('#head').load("head.html", function (){
             localStorage.setItem('uphone','');
         })
     }
+
+    // 跳转首页
+    $('.indexCollectLink').click(function(){
+        if(localStorage.getItem('uphone')){
+            location.href = "./collect.html";
+        } else {
+            location.href = "./login.html";
+        }
+    })
     
     //  头left的隐藏
     $("#header-vue-left div a").hover(function () {
